@@ -1,0 +1,107 @@
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 6rem 0 4rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.heroText {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Service Rows */
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.serviceRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.reverse .contentCol {
+  order: 2;
+}
+
+.reverse .imageCol {
+  order: 1;
+}
+
+.serviceTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.serviceDesc {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.bulletList {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.bulletList li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.bulletList li::before {
+  content: "•";
+  color: var(--primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius);
+  background-color: var(--muted);
+}
+
+.ctaSection {
+    text-align: center;
+}
+
+.ctaContent h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.ctaContent p {
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .serviceRow {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .reverse .contentCol {
+    order: 1;
+  }
+  
+  .reverse .imageCol {
+    order: 2;
+  }
+}

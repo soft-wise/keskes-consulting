@@ -1,0 +1,11 @@
+.section {
+  padding: 5rem 0;
+}
+
+.white {
+  background-color: var(--background);
+}
+
+.muted {
+  background-color: var(--muted);
+}
