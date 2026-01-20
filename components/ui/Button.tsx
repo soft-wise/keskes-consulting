@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from './Button.module.css';
+import { cn } from '@/lib/utils';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline';
@@ -14,18 +14,26 @@ const Button = ({
   className = '', 
   ...props 
 }: ButtonProps) => {
-  const cn = `${styles.btn} ${styles[variant]} ${className}`;
+  const variants = {
+    primary: "bg-burgundy-700 hover:bg-burgundy-800 text-white shadow-md hover:shadow-lg",
+    secondary: "bg-neutral-100 hover:bg-neutral-200 text-neutral-900",
+    outline: "bg-transparent border border-neutral-300 text-neutral-900 hover:bg-neutral-50"
+  };
+
+  const baseStyles = "inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-200 active:scale-95 focus:outline-none focus:ring-2 focus:ring-burgundy-500/50";
+  
+  const cnClasses = cn(baseStyles, variants[variant], className);
 
   if (href) {
     return (
-      <Link href={href} className={cn}>
+      <Link href={href} className={cnClasses}>
         {children}
       </Link>
     );
   }
 
   return (
-    <button className={cn} {...props}>
+    <button className={cnClasses} {...props}>
       {children}
     </button>
   );
