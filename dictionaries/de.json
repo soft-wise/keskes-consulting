@@ -1,0 +1,287 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "services": "Leistungen",
+    "caseStudies": "Fallstudien",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Datenstrategie, die",
+    "titleHighlight": "Unternehmen voranbringt",
+    "subtitle": "Wir helfen zukunftsorientierten Unternehmen, das wahre Potenzial ihrer Daten durch Expertenberatung und umsetzbare Erkenntnisse zu erschließen.",
+    "cta": "Jetzt starten",
+    "viewWork": "Unsere Arbeit ansehen"
+  },
+  "services": {
+    "sectionTitle": "Was wir tun",
+    "sectionSubtitle": "Umfassende Datenlösungen für moderne Unternehmen.",
+    "viewAll": "Alle Leistungen ansehen",
+    "items": [
+      {
+        "title": "Strategische Daten-Roadmaps",
+        "description": "Richten Sie Ihre Dateninitiativen auf 10-faches Unternehmenswachstum aus. Wir zeigen den Weg vom Chaos zur Klarheit."
+      },
+      {
+        "title": "Skalierbare Daten-Grundlagen",
+        "description": "Entwicklung robuster Pipelines, die Petabytes mit Millisekunden-Latenz verarbeiten. Für zukünftiges Wachstum gebaut."
+      },
+      {
+        "title": "Nahtlose Cloud-Migration",
+        "description": "Modernisieren Sie Legacy-Systeme mit 0% Ausfallzeit und verbesserter Sicherheit. Schneller und sicherer."
+      },
+      {
+        "title": "Umsetzbare KI & ML",
+        "description": "Setzen Sie prädiktive Modelle ein, die sich direkt auf das Ergebnis auswirken. Verwandeln Sie Daten in Entscheidungen."
+      }
+    ]
+  },
+  "servicesPage": {
+    "title": "Unsere Leistungen",
+    "subtitle": "Umfassende Datenlösungen, die auf Ihre Geschäftsanforderungen zugeschnitten sind. Von der Strategie bis zur Implementierung helfen wir Ihnen, das volle Potenzial Ihrer Daten zu erschließen.",
+    "learnMore": "Mehr erfahren",
+    "services": [
+      {
+        "title": "Datenstrategie",
+        "description": "Wir helfen Ihnen, eine klare Roadmap zu definieren, um Ihre Daten in einen Wettbewerbsvorteil zu verwandeln. Unser strategischer Ansatz stellt sicher, dass Ihre Dateninitiativen mit Ihren Geschäftszielen übereinstimmen.",
+        "bullets": [
+          "Datenreife-Bewertung",
+          "Roadmap-Entwicklung",
+          "Governance-Frameworks",
+          "ROI-Analyse"
+        ]
+      },
+      {
+        "title": "Analytics Engineering",
+        "description": "Bauen Sie eine robuste, skalierbare Datengrundlage auf. Wir entwerfen und implementieren moderne Daten-Stacks, die saubere, zuverlässige Daten an Ihre Stakeholder liefern.",
+        "bullets": [
+          "Datenmodellierung (dbt)",
+          "Pipeline-Orchestrierung",
+          "Data Warehouse-Architektur",
+          "Qualitätssicherung"
+        ]
+      },
+      {
+        "title": "Cloud-Migration",
+        "description": "Migrieren Sie Ihre Legacy-Systeme mit Zuversicht in die Cloud. Wir bewältigen den komplexen Migrationsprozess und optimieren gleichzeitig Kosten und Leistung.",
+        "bullets": [
+          "Legacy zu Cloud-Übergang",
+          "Multi-Cloud-Strategie",
+          "Kostenoptimierung",
+          "Sicherheit & Compliance"
+        ]
+      },
+      {
+        "title": "Umsetzbare KI & ML",
+        "description": "Setzen Sie prädiktive Modelle ein, die sich direkt auf das Ergebnis auswirken. Verwandeln Sie Daten mit unserer KI- und Machine-Learning-Expertise in Entscheidungen.",
+        "bullets": [
+          "Prädiktive Modellierung",
+          "Natural Language Processing",
+          "Computer Vision",
+          "MLOps"
+        ]
+      }
+    ],
+    "ctaTitle": "Bereit, Ihre Datenstrategie zu transformieren?",
+    "ctaSubtitle": "Lassen Sie uns besprechen, wie unsere Leistungen Ihrem Unternehmen helfen können, in der datengesteuerten Welt zu wachsen und zu gedeihen.",
+    "ctaButton": "Kontakt aufnehmen"
+  },
+  "caseStudiesPage": {
+    "title": "Fallstudien",
+    "subtitle": "Echte Ergebnisse aus unserer Partnerschaft mit zukunftsorientierten Unternehmen.",
+    "readMore": "Vollständige Geschichte lesen",
+    "cases": [
+      {
+        "slug": "global-bank-scaling",
+        "client": "FintechCo",
+        "title": "Skalierung der Dateninfrastruktur für eine globale Bank",
+        "summary": "Wie wir die Abfragezeiten um 40% reduziert und die Datenzuverlässigkeit in 12 Ländern durch Migration zu einem modernen Cloud-Data-Warehouse verbessert haben.",
+        "metrics": ["40% schneller", "99,9% Verfügbarkeit", "12 Länder"]
+      },
+      {
+        "slug": "retail-analytics",
+        "client": "ShopMega",
+        "title": "Prädiktive Analytik für Einzelhandelsinventar",
+        "summary": "Implementierung von Machine-Learning-Modellen zur Vorhersage von Lagerengpässen und Optimierung der Lieferkette für eine große Einzelhandelskette.",
+        "metrics": ["15% Kostenreduktion", "2M+ Produkte", "Echtzeit"]
+      },
+      {
+        "slug": "healthcare-compliance",
+        "client": "HealthPlus",
+        "title": "Automatisierte Compliance für Gesundheitsdaten",
+        "summary": "Aufbau eines sicheren, automatisierten Frameworks zur Gewährleistung der HIPAA-Compliance und gleichzeitiger Ermöglichung des Zugriffs auf anonymisierte Daten für Forschungsteams.",
+        "metrics": ["100% konform", "0 Datenlecks", "20x schnellerer Zugriff"]
+      }
+    ]
+  },
+  "aboutPage": {
+    "title": "Über Keskess Consulting",
+    "subtitle": "Wir sind ein Team von Dateningenieuren, Strategen und Analysten, die sich der Unterstützung von Unternehmen bei besseren Entscheidungen widmen.",
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Den Zugang zu hochwertigen Dateneinblicken zu demokratisieren. Wir glauben, dass jedes Unternehmen, unabhängig von seiner Größe, eine erstklassige Dateninfrastruktur verdient."
+    },
+    "vision": {
+      "title": "Unsere Vision",
+      "description": "Eine Welt, in der Daten kein Engpass, sondern ein Beschleuniger sind. Wir stellen uns eine Zukunft vor, in der Geschäftsführer Fragen stellen und sofort Antworten erhalten können."
+    },
+    "values": {
+      "title": "Unsere Grundwerte",
+      "items": [
+        {
+          "title": "Transparenz",
+          "description": "Wir glauben an offene Kommunikation und klare Daten."
+        },
+        {
+          "title": "Exzellenz",
+          "description": "Wir geben uns nicht mit 'gut genug' zufrieden. Wir bauen für Skalierung."
+        },
+        {
+          "title": "Neugier",
+          "description": "Wir stellen die schwierigen Fragen, um die richtigen Antworten zu finden."
+        },
+        {
+          "title": "Wirkung",
+          "description": "Wir konzentrieren uns auf Arbeit, die echte Geschäftsergebnisse liefert."
+        }
+      ]
+    },
+    "team": {
+      "title": "Lernen Sie die Führung kennen",
+      "members": [
+        {
+          "name": "Sarah Jenkins",
+          "role": "CEO & Gründerin"
+        },
+        {
+          "name": "David Chen",
+          "role": "CTO"
+        },
+        {
+          "name": "Maria Rodriguez",
+          "role": "Leiterin Strategie"
+        }
+      ]
+    }
+  },
+  "contactPage": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Bereit, Ihr Unternehmen mit Daten zu transformieren? Füllen Sie das Formular aus oder kontaktieren Sie uns direkt.",
+    "form": {
+      "name": "Vollständiger Name",
+      "email": "Geschäftliche E-Mail",
+      "phone": "Telefonnummer",
+      "company": "Unternehmen",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "required": "*"
+    },
+    "info": {
+      "title": "Kontaktinformationen",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "office": "Büro",
+      "address": "123 Data Street\nTech District, CA 94043"
+    },
+    "social": {
+      "title": "Folgen Sie uns"
+    }
+  },
+  "caseStudies": {
+    "sectionTitle": "Echte Ergebnisse aus echter Arbeit",
+    "sectionSubtitle": "Sehen Sie, wie wir anderen Unternehmen geholfen haben, ihre Daten interaktiv zu transformieren.",
+    "viewAll": "Alle Fallstudien ansehen",
+    "cases": [
+      {
+        "title": "Skalierung der Fintech-Infrastruktur",
+        "description": "Reduzierung der Abfragelatenz um 40% und Einsparung von 2 Mio. $ jährlicher Cloud-Kosten für eine globale Bank.",
+        "tag": "Fintech"
+      },
+      {
+        "title": "Echtzeit-E-Commerce-Analytik",
+        "description": "Steigerung der Konversionsraten um 15% (500.000 $/Monat) durch sofortige Einblicke in das Kundenverhalten.",
+        "tag": "E-Commerce"
+      },
+      {
+        "title": "Prädiktive IoT-Wartung",
+        "description": "Eliminierung ungeplanter Ausfallzeiten, Steigerung der Fertigungsleistung um 25%.",
+        "tag": "Fertigung"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Lassen Sie uns über Ihre Daten sprechen",
+    "subtitle": "Bereit, Ihr Unternehmen zu transformieren? Vereinbaren Sie noch heute eine kostenlose Beratung mit unseren Experten.",
+    "button": "Kontakt"
+  },
+  "footer": {
+    "description": "Wir helfen zukunftsorientierten Unternehmen, das wahre Potenzial ihrer Daten durch Expertenberatung, Engineering und umsetzbare Erkenntnisse zu erschließen.",
+    "company": "Unternehmen",
+    "legal": "Rechtliches",
+    "impressum": "Impressum",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "cookies": "Cookie-Richtlinie",
+    "contactUs": "Kontaktieren Sie uns",
+    "copyright": "Alle Rechte vorbehalten."
+  },
+  "serviceDetails": {
+    "backToServices": "Zurück zu Leistungen",
+    "whatWeOffer": "Was wir anbieten",
+    "readyTitle": "Bereit anzufangen?",
+    "readySubtitle": "Lassen Sie uns besprechen, wie {service} Ihrem Unternehmen beim Wachstum helfen kann.",
+    "contactButton": "Kontaktieren Sie uns",
+    "strategy": {
+      "title": "Datenstrategie",
+      "description": "Wir helfen Ihnen, eine klare Roadmap zu definieren, um Ihre Daten in einen Wettbewerbsvorteil zu verwandeln. Unser strategischer Ansatz stellt sicher, dass Ihre Dateninitiativen mit Ihren Geschäftszielen übereinstimmen.",
+      "benefits": [
+        "Datenreife-Bewertung: Verstehen Sie, wo Sie stehen und wohin Sie gehen müssen.",
+        "Roadmap-Entwicklung: Ein schrittweiser Plan zur Erreichung Ihrer Datenziele.",
+        "Governance-Frameworks: Gewährleisten Sie Datenqualität, Sicherheit und Compliance.",
+        "ROI-Analyse: Messen Sie die geschäftlichen Auswirkungen Ihrer Dateninvestitionen."
+      ]
+    },
+    "engineering": {
+      "title": "Analytics Engineering",
+      "description": "Bauen Sie eine robuste, skalierbare Datengrundlage auf. Wir entwerfen und implementieren moderne Daten-Stacks, die saubere, zuverlässige Daten an Ihre Stakeholder liefern.",
+      "benefits": [
+        "Datenmodellierung (dbt): Transformieren Sie Rohdaten in Geschäftslogik.",
+        "Pipeline-Orchestrierung: Automatisieren Sie Ihre Daten-Workflows.",
+        "Data Warehouse-Architektur: Optimiert für Leistung und Kosten.",
+        "Qualitätssicherung: Automatisierte Tests für Datenzuverlässigkeit."
+      ]
+    },
+    "cloud": {
+      "title": "Cloud-Migration",
+      "description": "Migrieren Sie Ihre Legacy-Systeme mit Zuversicht in die Cloud. Wir bewältigen den komplexen Migrationsprozess und optimieren gleichzeitig Kosten und Leistung.",
+      "benefits": [
+        "Legacy zu Cloud: Nahtlose Übergangsstrategien.",
+        "Multi-Cloud-Strategie: Vermeiden Sie Vendor Lock-in.",
+        "Kostenoptimierung: Zahlen Sie nur für das, was Sie nutzen.",
+        "Sicherheit & Compliance: Branchenstandard-Schutz."
+      ]
+    },
+    "ai": {
+      "title": "Umsetzbare KI & ML",
+      "description": "Setzen Sie prädiktive Modelle ein, die sich direkt auf das Ergebnis auswirken. Verwandeln Sie Daten in Entscheidungen.",
+      "benefits": [
+        "Prädiktive Modellierung: Prognostizieren Sie Trends und Verhaltensweisen.",
+        "Natural Language Processing: Erschließen Sie Erkenntnisse aus Text.",
+        "Computer Vision: Automatisieren Sie visuelle Aufgaben.",
+        "MLOps: Bereitstellen und Warten von Modellen in der Produktion."
+      ]
+    }
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Bereit, Ihr Unternehmen mit Daten zu transformieren? Füllen Sie das Formular aus oder kontaktieren Sie uns direkt.",
+    "name": "Vollständiger Name",
+    "email": "Geschäftliche E-Mail",
+    "phone": "Telefonnummer",
+    "company": "Unternehmen",
+    "message": "Nachricht",
+    "submit": "Nachricht senden",
+    "info": "Kontaktinformationen",
+    "followUs": "Folgen Sie uns"
+  }
+}

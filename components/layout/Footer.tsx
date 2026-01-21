@@ -1,47 +1,81 @@
 import Link from 'next/link';
 import { IconBrandLinkedin, IconBrandTwitter, IconBrandGithub } from '@tabler/icons-react';
+import type { Locale } from '@/i18n-config';
 
-const Footer = () => {
+const Footer = ({ lang }: { lang: Locale }) => {
+  const t = {
+    description: lang === 'de' 
+      ? 'Wir helfen zukunftsorientierten Unternehmen, das wahre Potenzial ihrer Daten zu erschließen.'
+      : 'We help forward-thinking companies unlock the true potential of their data through expert consulting, engineering, and actionable insights.',
+    company: lang === 'de' ? 'Unternehmen' : 'Company',
+    legal: lang === 'de' ? 'Rechtliches' : 'Legal',
+    aboutUs: lang === 'de' ? 'Über uns' : 'About Us',
+    services: lang === 'de' ? 'Leistungen' : 'Services',
+    caseStudies: lang === 'de' ? 'Fallstudien' : 'Case Studies',
+    contact: lang === 'de' ? 'Kontakt' : 'Contact',
+    contactUs: lang === 'de' ? 'Kontaktieren Sie uns' : 'Contact Us',
+    impressum: 'Impressum',
+    privacy: lang === 'de' ? 'Datenschutzrichtlinie' : 'Privacy Policy',
+    terms: lang === 'de' ? 'Nutzungsbedingungen' : 'Terms of Service',
+    cookies: lang === 'de' ? 'Cookie-Richtlinie' : 'Cookie Policy',
+    copyright: lang === 'de' ? 'Alle Rechte vorbehalten.' : 'All rights reserved.',
+  };
+
   return (
     <footer className="bg-burgundy-50 border-t border-burgundy-100 text-neutral-600 py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
-            <Link href="/" className="font-serif font-bold text-2xl text-burgundy-900 tracking-tight hover:text-burgundy-700 transition-colors">
+            <Link href={`/${lang}`} className="font-serif font-bold text-2xl text-burgundy-900 tracking-tight hover:text-burgundy-700 transition-colors">
               Keskess Consulting
             </Link>
             <p className="mt-4 text-neutral-600 max-w-sm leading-relaxed">
-              We help forward-thinking companies unlock the true potential of their data through expert consulting, engineering, and actionable insights.
+              {t.description}
             </p>
-            <div className="flex gap-4 mt-6">
-                <SocialLink href="#" icon={<IconBrandLinkedin className="w-5 h-5" />} />
-                <SocialLink href="#" icon={<IconBrandTwitter className="w-5 h-5" />} />
-                <SocialLink href="#" icon={<IconBrandGithub className="w-5 h-5" />} />
+            
+            <div className="mt-6 flex flex-col gap-2 text-sm text-neutral-600">
+                <p>123 Data Street, Tech District, CA 94043</p>
+                <div className="flex gap-4">
+                    <a href="tel:+15550123456" className="hover:text-burgundy-700 transition-colors">+1 (555) 012-3456</a>
+                    <a href="mailto:hello@keskessconsulting.com" className="hover:text-burgundy-700 transition-colors">hello@keskessconsulting.com</a>
+                </div>
+            </div>
+
+            <div className="flex gap-4 mt-6 items-center">
+                <Link href={`/${lang}/contact`} className="bg-burgundy-700 text-white px-5 py-2 rounded-full font-medium text-sm hover:bg-burgundy-800 transition-colors shadow-sm">
+                    {t.contactUs}
+                </Link>
+                <div className="flex gap-2">
+                    <SocialLink href="#" icon={<IconBrandLinkedin className="w-4 h-4" />} />
+                    <SocialLink href="#" icon={<IconBrandTwitter className="w-4 h-4" />} />
+                    <SocialLink href="#" icon={<IconBrandGithub className="w-4 h-4" />} />
+                </div>
             </div>
           </div>
           
           <div>
-            <h4 className="font-bold text-burgundy-900 mb-6 uppercase tracking-wider text-sm">Company</h4>
+            <h4 className="font-bold text-burgundy-900 mb-6 uppercase tracking-wider text-sm">{t.company}</h4>
             <ul className="space-y-3">
-              <FooterLink href="/about">About Us</FooterLink>
-              <FooterLink href="/services">Services</FooterLink>
-              <FooterLink href="/case-studies">Case Studies</FooterLink>
-              <FooterLink href="/contact">Contact</FooterLink>
+              <FooterLink href={`/${lang}/about`}>{t.aboutUs}</FooterLink>
+              <FooterLink href={`/${lang}/services`}>{t.services}</FooterLink>
+              <FooterLink href={`/${lang}/case-studies`}>{t.caseStudies}</FooterLink>
+              <FooterLink href={`/${lang}/contact`}>{t.contact}</FooterLink>
             </ul>
           </div>
           
           <div>
-             <h4 className="font-bold text-burgundy-900 mb-6 uppercase tracking-wider text-sm">Legal</h4>
+             <h4 className="font-bold text-burgundy-900 mb-6 uppercase tracking-wider text-sm">{t.legal}</h4>
             <ul className="space-y-3">
-              <FooterLink href="/privacy">Privacy Policy</FooterLink>
-              <FooterLink href="/terms">Terms of Service</FooterLink>
-              <FooterLink href="/cookies">Cookie Policy</FooterLink>
+              <FooterLink href={`/${lang}/impressum`}>{t.impressum}</FooterLink>
+              <FooterLink href={`/${lang}/privacy`}>{t.privacy}</FooterLink>
+              <FooterLink href={`/${lang}/terms`}>{t.terms}</FooterLink>
+              <FooterLink href={`/${lang}/cookies`}>{t.cookies}</FooterLink>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-burgundy-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-500">
-          <p>&copy; {new Date().getFullYear()} Keskess Consulting. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Keskess Consulting. {t.copyright}</p>
           <div className="flex gap-6 mt-4 md:mt-0">
              <span>Designed with Aceternity</span>
           </div>

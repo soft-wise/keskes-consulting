@@ -1,19 +1,30 @@
 import Section from "@/components/utils/Section";
 import styles from "./page.module.css";
 import { Metadata } from "next";
+import { getDictionary } from "@/get-dictionary";
+import type { Locale } from "@/i18n-config";
 
 export const metadata: Metadata = {
   title: "About Us | Keskess Consulting",
   description: "Learn about our mission, vision, and the team behind Keskess Consulting.",
 };
 
-export default function AboutPage() {
+const avatarColors = ["#FECACA", "#BFDBFE", "#BBF7D0"];
+
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ lang: Locale }>;
+}) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+
   return (
     <>
       <Section className={styles.intro} background="muted">
-        <h1 className={styles.pageTitle}>About Keskess Consulting</h1>
+        <h1 className={styles.pageTitle}>{dict.aboutPage.title}</h1>
         <p className={styles.pageSubtitle}>
-          We are a team of data engineers, strategists, and analysts dedicated to helping businesses make better decisions.
+          {dict.aboutPage.subtitle}
         </p>
       </Section>
 
@@ -22,9 +33,9 @@ export default function AboutPage() {
           {/* Mission */}
           <div className={styles.row}>
             <div className={styles.textCol}>
-              <h2 className={styles.sectionHeading}>Our Mission</h2>
+              <h2 className={styles.sectionHeading}>{dict.aboutPage.mission.title}</h2>
               <p className={styles.text}>
-                To democratize access to high-quality data insights. We believe that every company, regardless of size, deserves world-class data infrastructure.
+                {dict.aboutPage.mission.description}
               </p>
             </div>
             <div className={styles.imageCol}>
@@ -35,9 +46,9 @@ export default function AboutPage() {
           {/* Vision */}
           <div className={`${styles.row} ${styles.reverse}`}>
             <div className={styles.textCol}>
-              <h2 className={styles.sectionHeading}>Our Vision</h2>
+              <h2 className={styles.sectionHeading}>{dict.aboutPage.vision.title}</h2>
               <p className={styles.text}>
-                A world where data is not a bottleneck, but an accelerator. We envision a future where business leaders can ask questions and get answers instantly.
+                {dict.aboutPage.vision.description}
               </p>
             </div>
              <div className={styles.imageCol}>
@@ -49,17 +60,12 @@ export default function AboutPage() {
 
       <Section background="muted">
         <div className={styles.valuesContainer}>
-          <h2 className={styles.centeredHeading}>Our Core Values</h2>
+          <h2 className={styles.centeredHeading}>{dict.aboutPage.values.title}</h2>
           <div className={styles.valuesGrid}>
-            {[
-              { title: "Transparency", desc: "We believe in open communication and clear data." },
-              { title: "Excellence", desc: "We don't settle for 'good enough'. We build for scale." },
-              { title: "Curiosity", desc: "We ask the hard questions to find the right answers." },
-              { title: "Impact", desc: "We focus on work that drives real business results." }
-            ].map((value, i) => (
+            {dict.aboutPage.values.items.map((value: any, i: number) => (
               <div key={i} className={styles.valueCard}>
                 <h3 className={styles.valueTitle}>{value.title}</h3>
-                <p className={styles.valueDesc}>{value.desc}</p>
+                <p className={styles.valueDesc}>{value.description}</p>
               </div>
             ))}
           </div>
@@ -68,15 +74,11 @@ export default function AboutPage() {
 
       <Section>
         <div className={styles.teamContainer}>
-           <h2 className={styles.centeredHeading}>Meet the Leadership</h2>
+           <h2 className={styles.centeredHeading}>{dict.aboutPage.team.title}</h2>
            <div className={styles.teamGrid}>
-             {[
-               { name: "Sarah Jenkins", role: "CEO & Founder", bg: "#FECACA" },
-               { name: "David Chen", role: "CTO", bg: "#BFDBFE" },
-               { name: "Maria Rodriguez", role: "Head of Strategy", bg: "#BBF7D0" },
-             ].map((member, i) => (
+             {dict.aboutPage.team.members.map((member: any, i: number) => (
                <div key={i} className={styles.teamMember}>
-                 <div className={styles.avatar} style={{ backgroundColor: member.bg }} />
+                 <div className={styles.avatar} style={{ backgroundColor: avatarColors[i] }} />
                  <h3 className={styles.memberName}>{member.name}</h3>
                  <p className={styles.memberRole}>{member.role}</p>
                </div>
