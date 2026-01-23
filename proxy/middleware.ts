@@ -1,25 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { i18n } from './i18n-config';
+import { i18n } from '../i18n-config';
 
 function getLocale(request: NextRequest): string {
   // Check for existing locale in cookie
   const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
-  if (cookieLocale && i18n.locales.includes(cookieLocale as any)) {
+  if (cookieLocale && i18n.locales.includes(cookieLocale as 'en' | 'de')) {
     return cookieLocale;
   }
-  
+
   // Check Accept-Language header
   const acceptLanguage = request.headers.get('Accept-Language');
   if (acceptLanguage) {
     const preferredLocale = acceptLanguage
       .split(',')
       .map(lang => lang.split(';')[0].trim().substring(0, 2))
-      .find(lang => i18n.locales.includes(lang as any));
+      .find(lang => i18n.locales.includes(lang as 'en' | 'de'));
     if (preferredLocale) {
       return preferredLocale;
     }
   }
-  
+
   return i18n.defaultLocale;
 }
 

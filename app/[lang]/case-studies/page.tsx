@@ -4,24 +4,76 @@ import styles from "./page.module.css";
 import { Metadata } from "next";
 import { getDictionary } from "@/get-dictionary";
 import type { Locale } from "@/i18n-config";
+import { StructuredData } from "@/components/seo/structured-data";
 
-export const metadata: Metadata = {
-  title: "Case Studies | Keskess Consulting",
-  description: "See how we have helped companies transform their data landscape.",
-};
+const baseUrl = "https://keskessconsulting.com";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = lang as Locale;
+  
+  return {
+    title: "Case Studies - Real Results from Data Transformation",
+    description: "See how we have helped companies transform their data landscape. Real results from our partnership with forward-thinking companies.",
+    keywords: [
+      "data transformation case studies",
+      "analytics success stories",
+      "data migration results",
+      "business intelligence case studies",
+    ],
+    openGraph: {
+      title: "Case Studies - Data Transformation Success Stories",
+      description: "Real results from our partnership with forward-thinking companies.",
+      url: `${baseUrl}/${locale}/case-studies`,
+    },
+    alternates: {
+      canonical: `${baseUrl}/${locale}/case-studies`,
+      languages: {
+        en: `${baseUrl}/en/case-studies`,
+        de: `${baseUrl}/de/case-studies`,
+      },
+    },
+  };
+}
 
 const imageColors = ["#E0F2FE", "#F0FDF4", "#FFF7ED"];
 
 export default async function CaseStudiesPage({
   params,
 }: {
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  const locale = lang as Locale;
+  const dict = await getDictionary(locale);
+
+  // BreadcrumbList structured data
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${baseUrl}/${locale}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Case Studies",
+        item: `${baseUrl}/${locale}/case-studies`,
+      },
+    ],
+  };
 
   return (
     <>
+      <StructuredData data={breadcrumbSchema} />
       <Section className={styles.intro} background="muted">
         <h1 className={styles.pageTitle}>{dict.caseStudiesPage.title}</h1>
         <p className={styles.pageSubtitle}>
@@ -31,11 +83,11 @@ export default async function CaseStudiesPage({
 
       <Section>
         <div className={styles.caseList}>
-          {dict.caseStudiesPage.cases.map((project: any, index: number) => (
+          {dict.caseStudiesPage.cases.map((project, index) => (
             <div key={project.slug} className={styles.caseRow}>
-              <div 
-                className={styles.imagePlaceholder} 
-                style={{ backgroundColor: imageColors[index] }} 
+              <div
+                className={styles.imagePlaceholder}
+                style={{ backgroundColor: imageColors[index] }}
               />
               <div className={styles.content}>
                 <span className={styles.client}>{project.client}</span>
@@ -46,7 +98,7 @@ export default async function CaseStudiesPage({
                       <span key={i} className={styles.metric}>{m}</span>
                   ))}
                 </div>
-                <Link href={`/${lang}/case-studies/${project.slug}`} className={styles.link}>
+                <Link href={`/${locale}/case-studies/${project.slug}`} className={styles.link}>
                   {dict.caseStudiesPage.readMore} &rarr;
                 </Link>
               </div>

@@ -7,22 +7,74 @@ import styles from "./page.module.css";
 import { Metadata } from "next";
 import { getDictionary } from "@/get-dictionary";
 import type { Locale } from "@/i18n-config";
+import { StructuredData } from "@/components/seo/structured-data";
 
-export const metadata: Metadata = {
-  title: "Contact Us | Keskess Consulting",
-  description: "Get in touch with our team to discuss your data needs.",
-};
+const baseUrl = "https://keskessconsulting.com";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = lang as Locale;
+  
+  return {
+    title: "Contact Us - Get in Touch with Our Team",
+    description: "Get in touch with our team to discuss your data needs. Ready to transform your business with data? Contact us today.",
+    keywords: [
+      "contact data consulting",
+      "data consulting inquiry",
+      "analytics consulting contact",
+      "get in touch",
+    ],
+    openGraph: {
+      title: "Contact Keskess Consulting",
+      description: "Ready to transform your business with data? Get in touch with our team.",
+      url: `${baseUrl}/${locale}/contact`,
+    },
+    alternates: {
+      canonical: `${baseUrl}/${locale}/contact`,
+      languages: {
+        en: `${baseUrl}/en/contact`,
+        de: `${baseUrl}/de/contact`,
+      },
+    },
+  };
+}
 
 export default async function ContactPage({
   params,
 }: {
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  const locale = lang as Locale;
+  const dict = await getDictionary(locale);
+
+  // BreadcrumbList structured data
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${baseUrl}/${locale}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Contact",
+        item: `${baseUrl}/${locale}/contact`,
+      },
+    ],
+  };
 
   return (
     <>
+      <StructuredData data={breadcrumbSchema} />
       <Section className={styles.intro} background="muted">
         <h1 className={styles.pageTitle}>{dict.contactPage.title}</h1>
         <p className={styles.pageSubtitle}>

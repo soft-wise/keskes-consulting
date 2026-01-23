@@ -3,24 +3,76 @@ import styles from "./page.module.css";
 import { Metadata } from "next";
 import { getDictionary } from "@/get-dictionary";
 import type { Locale } from "@/i18n-config";
+import { StructuredData } from "@/components/seo/structured-data";
 
-export const metadata: Metadata = {
-  title: "About Us | Keskess Consulting",
-  description: "Learn about our mission, vision, and the team behind Keskess Consulting.",
-};
+const baseUrl = "https://keskessconsulting.com";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = lang as Locale;
+  
+  return {
+    title: "About Us - Our Mission, Vision & Team",
+    description: "Learn about our mission, vision, and the team behind Keskess Consulting. We are dedicated to helping businesses make better data-driven decisions.",
+    keywords: [
+      "about keskess consulting",
+      "data consulting team",
+      "data strategy experts",
+      "analytics consulting company",
+    ],
+    openGraph: {
+      title: "About Keskess Consulting",
+      description: "Data engineers, strategists, and analysts dedicated to helping businesses make better decisions.",
+      url: `${baseUrl}/${locale}/about`,
+    },
+    alternates: {
+      canonical: `${baseUrl}/${locale}/about`,
+      languages: {
+        en: `${baseUrl}/en/about`,
+        de: `${baseUrl}/de/about`,
+      },
+    },
+  };
+}
 
 const avatarColors = ["#FECACA", "#BFDBFE", "#BBF7D0"];
 
 export default async function AboutPage({
   params,
 }: {
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  const locale = lang as Locale;
+  const dict = await getDictionary(locale);
+
+  // BreadcrumbList structured data
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${baseUrl}/${locale}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "About",
+        item: `${baseUrl}/${locale}/about`,
+      },
+    ],
+  };
 
   return (
     <>
+      <StructuredData data={breadcrumbSchema} />
       <Section className={styles.intro} background="muted">
         <h1 className={styles.pageTitle}>{dict.aboutPage.title}</h1>
         <p className={styles.pageSubtitle}>
