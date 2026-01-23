@@ -6,7 +6,7 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import { CaseStudiesSection } from "@/components/sections/case-studies-section";
 import { CTASection } from "@/components/sections/CTA-section";
-import { StructuredData } from "@/components/seo/structured-data";
+import { StructuredData, BreadcrumbSchema } from "@/components/seo";
 import type { Metadata } from "next";
 
 const baseUrl = "https://keskessconsulting.com";
@@ -80,9 +80,15 @@ export default async function Home({
     },
   };
 
+  // Breadcrumb schema data
+  const breadcrumbItems = [
+    { name: "Home", item: `${baseUrl}/${locale}` },
+  ];
+
   return (
     <>
       <StructuredData data={websiteSchema} />
+      <BreadcrumbSchema items={breadcrumbItems} />
       <HeroSection dict={dict} lang={locale} />
       <ServicesSection dict={dict} lang={locale} icons={serviceIcons} />
       <CaseStudiesSection dict={dict} lang={locale} />

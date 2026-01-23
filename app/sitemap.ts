@@ -2,19 +2,17 @@ import { MetadataRoute } from 'next';
 import { i18n } from '@/i18n-config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://keskessconsulting.com';
-  
-  // Define all routes
+  // Define all routes with their metadata
   const routes = [
-    '',
-    '/services',
-    '/services/strategy',
-    '/services/engineering',
-    '/services/cloud',
-    '/services/ai',
-    '/case-studies',
-    '/about',
-    '/contact',
+    { path: '', priority: 1.0, changeFreq: 'weekly' as const, lastModified: new Date() },
+    { path: '/services', priority: 0.8, changeFreq: 'monthly' as const, lastModified: new Date() },
+    { path: '/services/strategy', priority: 0.7, changeFreq: 'monthly' as const, lastModified: new Date() },
+    { path: '/services/engineering', priority: 0.7, changeFreq: 'monthly' as const, lastModified: new Date() },
+    { path: '/services/cloud', priority: 0.7, changeFreq: 'monthly' as const, lastModified: new Date() },
+    { path: '/services/ai', priority: 0.7, changeFreq: 'monthly' as const, lastModified: new Date() },
+    { path: '/case-studies', priority: 0.8, changeFreq: 'weekly' as const, lastModified: new Date() },
+    { path: '/about', priority: 0.6, changeFreq: 'monthly' as const, lastModified: new Date() },
+    { path: '/contact', priority: 0.9, changeFreq: 'monthly' as const, lastModified: new Date() },
   ];
 
   // Generate sitemap entries for each route in each language
@@ -22,24 +20,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   routes.forEach((route) => {
     i18n.locales.forEach((locale) => {
-      const url = `${baseUrl}/${locale}${route}`;
-      
-      // Set priority based on route importance
-      let priority = 0.5;
-      if (route === '') priority = 1.0; // Home page
-      else if (route === '/services' || route === '/case-studies') priority = 0.8;
-      else if (route.startsWith('/services/')) priority = 0.7;
-      else if (route === '/contact') priority = 0.9;
-      
-      // Set change frequency
-      let changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never' = 'monthly';
-      if (route === '' || route === '/case-studies') changeFrequency = 'weekly';
+      const baseUrl = i18n.domains[locale];
+      const url = `${baseUrl}/${locale}${route.path}`;
       
       sitemapEntries.push({
         url,
-        lastModified: new Date(),
-        changeFrequency,
-        priority,
+        lastModified: route.lastModified,
+        changeFrequency: route.changeFreq,
+        priority: route.priority,
+        alternates: {
+          languages: Object.fromEntries(
+            i18n.locales.map((loc) => [loc, `${i18n.domains[loc]}/${loc}${route.path}`])
+          ),
+        },
       });
     });
   });

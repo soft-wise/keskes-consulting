@@ -3,20 +3,43 @@ import Button from "@/components/ui/Button";
 import Link from "next/link";
 import { IconArrowLeft, IconCheck } from "@tabler/icons-react";
 import type { Locale } from "@/i18n-config";
+import { ServiceSchema } from "@/components/seo";
+import { BreadcrumbSchema } from "@/components/seo";
+import { getBaseUrl } from "@/lib/seo-utils";
 
 export default function ServiceDetail({ 
     lang,
     dict,
     serviceKey,
-}: { 
+}: {
     lang: Locale;
-    dict: any;
+    dict: Record<string, unknown>;
     serviceKey: 'strategy' | 'engineering' | 'cloud' | 'ai';
 }) {
-  const service = dict.serviceDetails[serviceKey];
+  const serviceDetails = dict.serviceDetails as Record<string, { title: string; description: string; benefits: string[]; backToServices: string; whatWeOffer: string; readyTitle: string; readySubtitle: string; contactButton: string } & string>;
+  const service = serviceDetails[serviceKey];
+  const baseUrl = getBaseUrl(lang);
   
+  // Service schema data
+  const serviceSchemaData = {
+    name: service.title,
+    description: service.description,
+    provider: "Keskess Consulting",
+    url: `${baseUrl}/${lang}/services/${serviceKey}`,
+  };
+
+  // Breadcrumb schema data
+  const breadcrumbItems = [
+    { name: "Home", item: `${baseUrl}/${lang}` },
+    { name: "Services", item: `${baseUrl}/${lang}/services` },
+    { name: service.title, item: `${baseUrl}/${lang}/services/${serviceKey}` },
+  ];
+
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <ServiceSchema {...serviceSchemaData} />
+      
       <Section background="muted" className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 mix-blend-multiply"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -25,7 +48,7 @@ export default function ServiceDetail({
                 className="inline-flex items-center gap-2 text-neutral-500 hover:text-burgundy-700 font-medium mb-8 transition-colors group"
             >
                 <IconArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-                {dict.serviceDetails.backToServices}
+                {String(serviceDetails.backToServices)}
             </Link>
             <div className="max-w-4xl">
                 <h1 className="text-4xl md:text-7xl font-serif font-bold text-burgundy-900 mb-6">{service.title}</h1>
@@ -37,7 +60,7 @@ export default function ServiceDetail({
       <Section background="white">
         <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-                <h2 className="text-3xl font-serif font-bold text-neutral-800 mb-12 text-center">{dict.serviceDetails.whatWeOffer}</h2>
+                <h2 className="text-3xl font-serif font-bold text-neutral-800 mb-12 text-center">{String(serviceDetails.whatWeOffer)}</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                     {service.benefits.map((benefit: string, i: number) => (
                         <div key={i} className="group p-8 rounded-2xl border border-neutral-100 bg-white hover:border-burgundy-100 hover:shadow-lg hover:shadow-burgundy-50/50 transition-all duration-300">
@@ -58,11 +81,11 @@ export default function ServiceDetail({
       </Section>
 
       <Section background="muted" className="text-center py-24">
-         <h2 className="text-3xl md:text-5xl font-serif font-bold text-burgundy-900 mb-6">{dict.serviceDetails.readyTitle}</h2>
+         <h2 className="text-3xl md:text-5xl font-serif font-bold text-burgundy-900 mb-6">{String(serviceDetails.readyTitle)}</h2>
          <p className="text-neutral-600 mb-10 text-xl max-w-2xl mx-auto">
-           {dict.serviceDetails.readySubtitle.replace('{service}', service.title)}
+            {serviceDetails.readySubtitle.replace('{service}', String(service.title))}
          </p>
-         <Button href={`/${lang}/contact`} className="text-lg px-8 py-4">{dict.serviceDetails.contactButton}</Button>
+         <Button href={`/${lang}/contact`} className="text-lg px-8 py-4">{String(serviceDetails.contactButton)}</Button>
       </Section>
     </>
   );

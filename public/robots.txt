@@ -2,5 +2,14 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://keskessconsulting.com/sitemap.xml
+# Disallow specific paths if needed
+# Disallow: /api/
+# Disallow: /_next/
+# Disallow: /private/
+
+# Crawl delay for aggressive bots
+Crawl-delay: 1
+
+# Sitemap locations for both domains
+Sitemap: https://keskess-consulting.com/sitemap.xml
+Sitemap: https://keskess-consulting.de/sitemap.xml

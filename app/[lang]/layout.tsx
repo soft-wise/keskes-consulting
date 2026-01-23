@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { i18n, type Locale } from "@/i18n-config";
 import { StructuredData } from "@/components/seo/structured-data";
+import { getBaseUrl, getLanguageAlternates } from "@/lib/seo-utils";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,8 +19,6 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const baseUrl = "https://keskessconsulting.com";
-
 export async function generateMetadata({
   params,
 }: {
@@ -27,6 +26,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as Locale;
+  const baseUrl = getBaseUrl(locale);
   
   const title = "Keskess Consulting | Data & Analytics Consulting";
   const description = "Data strategy that moves business forward. Expert consulting in data engineering, analytics, cloud migration, and AI/ML solutions.";
@@ -94,10 +94,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `${baseUrl}/${lang}`,
-      languages: {
-        en: `${baseUrl}/en`,
-        de: `${baseUrl}/de`,
-      },
+      languages: getLanguageAlternates(''),
     },
   };
 }
@@ -115,6 +112,7 @@ export default async function LangLayout({
 }) {
   const { lang } = await params;
   const locale = lang as Locale;
+  const baseUrl = getBaseUrl(locale);
   
   // Organization structured data
   const organizationSchema = {

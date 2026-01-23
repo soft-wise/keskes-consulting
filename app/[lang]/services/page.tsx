@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import { Metadata } from "next";
 import { getDictionary } from "@/get-dictionary";
 import type { Locale } from "@/i18n-config";
-import { StructuredData } from "@/components/seo/structured-data";
+import { BreadcrumbSchema } from "@/components/seo";
 
 const baseUrl = "https://keskessconsulting.com";
 
@@ -54,29 +54,15 @@ export default async function ServicesPage({
   const locale = lang as Locale;
   const dict = await getDictionary(locale);
 
-  // BreadcrumbList structured data
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: `${baseUrl}/${locale}`,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Services",
-        item: `${baseUrl}/${locale}/services`,
-      },
-    ],
-  };
+  // Breadcrumb schema data
+  const breadcrumbItems = [
+    { name: "Home", item: `${baseUrl}/${locale}` },
+    { name: "Services", item: `${baseUrl}/${locale}/services` },
+  ];
 
   return (
     <>
-      <StructuredData data={breadcrumbSchema} />
+      <BreadcrumbSchema items={breadcrumbItems} />
       <Section className={styles.hero} background="muted">
         <h1 className={styles.heroTitle}>{dict.servicesPage.title}</h1>
         <p className={styles.heroText}>
@@ -86,13 +72,13 @@ export default async function ServicesPage({
 
       <Section background="white">
         <div className={styles.servicesList}>
-          {dict.servicesPage.services.map((service: any, index: number) => (
+          {dict.servicesPage.services.map((service: Record<string, unknown>, index: number) => (
             <div key={index} className={`${styles.serviceRow} ${index % 2 === 1 ? styles.reverse : ''}`}>
               <div className={styles.contentCol}>
-                <h2 className={styles.serviceTitle}>{service.title}</h2>
-                <p className={styles.serviceDesc}>{service.description}</p>
+                <h2 className={styles.serviceTitle}>{String(service.title)}</h2>
+                <p className={styles.serviceDesc}>{String(service.description)}</p>
                 <ul className={styles.bulletList}>
-                  {service.bullets.map((bullet: string, i: number) => (
+                  {(service.bullets as string[]).map((bullet: string, i: number) => (
                     <li key={i}>{bullet}</li>
                   ))}
                 </ul>

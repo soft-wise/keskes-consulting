@@ -7,7 +7,7 @@ import styles from "./page.module.css";
 import { Metadata } from "next";
 import { getDictionary } from "@/get-dictionary";
 import type { Locale } from "@/i18n-config";
-import { StructuredData } from "@/components/seo/structured-data";
+import { BreadcrumbSchema } from "@/components/seo";
 
 const baseUrl = "https://keskessconsulting.com";
 
@@ -52,29 +52,15 @@ export default async function ContactPage({
   const locale = lang as Locale;
   const dict = await getDictionary(locale);
 
-  // BreadcrumbList structured data
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: `${baseUrl}/${locale}`,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Contact",
-        item: `${baseUrl}/${locale}/contact`,
-      },
-    ],
-  };
+  // Breadcrumb schema data
+  const breadcrumbItems = [
+    { name: "Home", item: `${baseUrl}/${locale}` },
+    { name: "Contact", item: `${baseUrl}/${locale}/contact` },
+  ];
 
   return (
     <>
-      <StructuredData data={breadcrumbSchema} />
+      <BreadcrumbSchema items={breadcrumbItems} />
       <Section className={styles.intro} background="muted">
         <h1 className={styles.pageTitle}>{dict.contactPage.title}</h1>
         <p className={styles.pageSubtitle}>

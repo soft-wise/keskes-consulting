@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import { Metadata } from "next";
 import { getDictionary } from "@/get-dictionary";
 import type { Locale } from "@/i18n-config";
-import { StructuredData } from "@/components/seo/structured-data";
+import { BreadcrumbSchema } from "@/components/seo";
 
 const baseUrl = "https://keskessconsulting.com";
 
@@ -50,29 +50,15 @@ export default async function AboutPage({
   const locale = lang as Locale;
   const dict = await getDictionary(locale);
 
-  // BreadcrumbList structured data
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: `${baseUrl}/${locale}`,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "About",
-        item: `${baseUrl}/${locale}/about`,
-      },
-    ],
-  };
+  // Breadcrumb schema data
+  const breadcrumbItems = [
+    { name: "Home", item: `${baseUrl}/${locale}` },
+    { name: "About", item: `${baseUrl}/${locale}/about` },
+  ];
 
   return (
     <>
-      <StructuredData data={breadcrumbSchema} />
+      <BreadcrumbSchema items={breadcrumbItems} />
       <Section className={styles.intro} background="muted">
         <h1 className={styles.pageTitle}>{dict.aboutPage.title}</h1>
         <p className={styles.pageSubtitle}>
@@ -114,10 +100,10 @@ export default async function AboutPage({
         <div className={styles.valuesContainer}>
           <h2 className={styles.centeredHeading}>{dict.aboutPage.values.title}</h2>
           <div className={styles.valuesGrid}>
-            {dict.aboutPage.values.items.map((value: any, i: number) => (
+            {dict.aboutPage.values.items.map((value: Record<string, unknown>, i: number) => (
               <div key={i} className={styles.valueCard}>
-                <h3 className={styles.valueTitle}>{value.title}</h3>
-                <p className={styles.valueDesc}>{value.description}</p>
+                <h3 className={styles.valueTitle}>{String(value.title)}</h3>
+                <p className={styles.valueDesc}>{String(value.description)}</p>
               </div>
             ))}
           </div>
@@ -128,11 +114,11 @@ export default async function AboutPage({
         <div className={styles.teamContainer}>
            <h2 className={styles.centeredHeading}>{dict.aboutPage.team.title}</h2>
            <div className={styles.teamGrid}>
-             {dict.aboutPage.team.members.map((member: any, i: number) => (
+             {dict.aboutPage.team.members.map((member: Record<string, unknown>, i: number) => (
                <div key={i} className={styles.teamMember}>
                  <div className={styles.avatar} style={{ backgroundColor: avatarColors[i] }} />
-                 <h3 className={styles.memberName}>{member.name}</h3>
-                 <p className={styles.memberRole}>{member.role}</p>
+                 <h3 className={styles.memberName}>{String(member.name)}</h3>
+                 <p className={styles.memberRole}>{String(member.role)}</p>
                </div>
              ))}
            </div>
