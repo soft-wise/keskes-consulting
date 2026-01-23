@@ -26,6 +26,12 @@ function getLocale(request: NextRequest): string {
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // Explicitly redirect root path to /en
+  if (pathname === '/') {
+    request.nextUrl.pathname = '/en';
+    return NextResponse.redirect(request.nextUrl);
+  }
+
   // Check if pathname starts with a locale
   const pathnameHasLocale = i18n.locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
