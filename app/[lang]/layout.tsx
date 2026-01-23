@@ -4,7 +4,7 @@ import "../globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { i18n, type Locale } from "@/i18n-config";
-import { StructuredData } from "@/components/seo/structured-data";
+import { StructuredData, LocalBusinessSchema } from "@/components/seo";
 import { getBaseUrl, getLanguageAlternates } from "@/lib/seo-utils";
 
 const inter = Inter({
@@ -143,11 +143,61 @@ export default async function LangLayout({
       "https://github.com/keskessconsulting",
     ],
   };
+
+  // LocalBusiness structured data for local SEO
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Keskess Consulting",
+    description: "Data & Analytics Consulting firm specializing in data strategy, engineering, and AI/ML solutions.",
+    url: baseUrl,
+    telephone: "+1-555-012-3456",
+    email: "hello@keskessconsulting.com",
+    availableLanguage: ["en", "de"],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "123 Data Street",
+      addressLocality: "Tech District",
+      addressRegion: "CA",
+      postalCode: "94043",
+      addressCountry: "US",
+    },
+    priceRange: "$$$",
+    serviceArea: [
+      {
+        "@type": "Country",
+        name: "United States",
+      },
+      {
+        "@type": "Country",
+        name: "Germany",
+      },
+    ],
+  };
   
   return (
     <html lang={lang}>
       <head>
         <StructuredData data={organizationSchema} />
+        <LocalBusinessSchema
+          name="Keskess Consulting"
+          description="Data & Analytics Consulting firm specializing in data strategy, engineering, and AI/ML solutions."
+          url={baseUrl}
+          telephone="+1-555-012-3456"
+          email="hello@keskessconsulting.com"
+          address={{
+            streetAddress: "123 Data Street",
+            addressLocality: "Tech District",
+            addressRegion: "CA",
+            postalCode: "94043",
+            addressCountry: "US",
+          }}
+          priceRange="$$"
+          serviceArea={[
+            { type: "Country", name: "United States" },
+            { type: "Country", name: "Germany" },
+          ]}
+        />
       </head>
       <body className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
         <Header lang={locale} />
