@@ -5,7 +5,12 @@ import { i18n, type Locale } from '@/i18n-config';
  * Returns the appropriate domain based on the language
  */
 export function getBaseUrl(locale: Locale): string {
-  return i18n.domains[locale];
+  const domain = i18n.domains[locale as keyof typeof i18n.domains];
+  if (!domain) {
+    // Fallback to default domain if locale not found
+    return i18n.domains[i18n.defaultLocale];
+  }
+  return domain;
 }
 
 /**

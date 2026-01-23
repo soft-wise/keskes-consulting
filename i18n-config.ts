@@ -2,7 +2,7 @@ export const i18n = {
   defaultLocale: 'en',
   locales: ['en', 'de'] as const,
   domains: {
-    en: 'https://keskess-consulting.com',
+    en: 'https://keskessconsulting.com',
     de: 'https://keskess-consulting.de',
   },
 } as const;
