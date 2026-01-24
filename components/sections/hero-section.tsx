@@ -5,7 +5,17 @@ import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
 import type { Locale } from "@/i18n-config";
 
-export function HeroSection({ dict, lang }: { dict: any; lang: Locale }) {
+interface Dictionary {
+  hero: {
+    title: string;
+    titleHighlight: string;
+    subtitle: string;
+    cta: string;
+    viewWork: string;
+  };
+}
+
+export function HeroSection({ dict, lang }: { dict: Dictionary; lang: Locale }) {
   return (
     <AuroraBackground>
       <motion.div

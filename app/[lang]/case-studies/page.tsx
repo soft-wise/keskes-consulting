@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import { getDictionary } from "@/get-dictionary";
 import type { Locale } from "@/i18n-config";
 import { BreadcrumbSchema } from "@/components/seo";
+import { CTASection } from "@/components/sections/CTA-section";
 
 const baseUrl = "https://keskessconsulting.com";
 
@@ -84,6 +85,13 @@ export default async function CaseStudiesPage({
                       <span key={i} className={styles.metric}>{m}</span>
                   ))}
                 </div>
+                {project.keywords && project.keywords.length > 0 && (
+                  <div className={styles.keywords}>
+                    {project.keywords.map((keyword: string, i: number) => (
+                        <span key={i} className={styles.keyword}>{keyword}</span>
+                    ))}
+                  </div>
+                )}
                 <Link href={`/${locale}/case-studies/${project.slug}`} className={styles.link}>
                   {dict.caseStudiesPage.readMore} &rarr;
                 </Link>
@@ -92,6 +100,7 @@ export default async function CaseStudiesPage({
           ))}
         </div>
       </Section>
+      <CTASection dict={dict} lang={locale} />
     </>
   );
 }

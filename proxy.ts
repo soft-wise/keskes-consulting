@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { i18n } from '../i18n-config';
+import { i18n } from './i18n-config';
 
 function getLocale(request: NextRequest): string {
   // Check for existing locale in cookie
@@ -23,7 +23,7 @@ function getLocale(request: NextRequest): string {
   return i18n.defaultLocale;
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Explicitly redirect root path to /en

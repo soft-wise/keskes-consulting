@@ -96,21 +96,24 @@
         "client": "FintechCo",
         "title": "Skalierung der Dateninfrastruktur für eine globale Bank",
         "summary": "Wie wir die Abfragezeiten um 40% reduziert und die Datenzuverlässigkeit in 12 Ländern durch Migration zu einem modernen Cloud-Data-Warehouse verbessert haben.",
-        "metrics": ["40% schneller", "99,9% Verfügbarkeit", "12 Länder"]
+        "metrics": ["40% schneller", "99,9% Verfügbarkeit", "12 Länder"],
+        "keywords": ["Datenengineering", "Cloud-Migration", "Fintech", "Data Warehouse", "Skalierbarkeit"]
       },
       {
         "slug": "retail-analytics",
         "client": "ShopMega",
         "title": "Prädiktive Analytik für Einzelhandelsinventar",
         "summary": "Implementierung von Machine-Learning-Modellen zur Vorhersage von Lagerengpässen und Optimierung der Lieferkette für eine große Einzelhandelskette.",
-        "metrics": ["15% Kostenreduktion", "2M+ Produkte", "Echtzeit"]
+        "metrics": ["15% Kostenreduktion", "2M+ Produkte", "Echtzeit"],
+        "keywords": ["Machine Learning", "Prädiktive Analytik", "Einzelhandel", "Lieferkette", "KI/ML"]
       },
       {
         "slug": "healthcare-compliance",
         "client": "HealthPlus",
         "title": "Automatisierte Compliance für Gesundheitsdaten",
         "summary": "Aufbau eines sicheren, automatisierten Frameworks zur Gewährleistung der HIPAA-Compliance und gleichzeitiger Ermöglichung des Zugriffs auf anonymisierte Daten für Forschungsteams.",
-        "metrics": ["100% konform", "0 Datenlecks", "20x schnellerer Zugriff"]
+        "metrics": ["100% konform", "0 Datenlecks", "20x schnellerer Zugriff"],
+        "keywords": ["Gesundheitswesen", "Compliance", "HIPAA", "Datensicherheit", "Automatisierung"]
       }
     ]
   },

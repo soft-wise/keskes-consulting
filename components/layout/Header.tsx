@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
-import { IconMenu2, IconX, IconWorld } from '@tabler/icons-react';
+import { IconMenu2, IconX, IconWorld, IconChevronDown } from '@tabler/icons-react';
 import { usePathname } from 'next/navigation';
 import type { Locale } from '@/i18n-config';
 
@@ -11,6 +11,7 @@ const Header = ({ lang }: { lang: Locale }) => {
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const pathname = usePathname();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -30,6 +31,9 @@ const Header = ({ lang }: { lang: Locale }) => {
 
   const switchedLocale = lang === 'en' ? 'de' : 'en';
   const switchedPath = pathname.replace(`/${lang}`, `/${switchedLocale}`);
+  const currentLocaleLabel = lang === 'en' ? 'EN' : 'DE';
+  const currentLocaleFullName = lang === 'en' ? 'English' : 'Deutsch';
+  const switchedLocaleFullName = switchedLocale === 'en' ? 'English' : 'Deutsch';
 
   return (
     <motion.header 
@@ -64,14 +68,44 @@ const Header = ({ lang }: { lang: Locale }) => {
             </li>
           </ul>
           
-          {/* Language Switcher */}
-          <Link 
-            href={switchedPath}
-            className="flex items-center gap-1 text-neutral-500 hover:text-burgundy-700 transition-colors text-sm font-medium"
-          >
-            <IconWorld className="w-4 h-4" />
-            {switchedLocale.toUpperCase()}
-          </Link>
+          {/* Language Switcher Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+              className="flex items-center gap-2 text-neutral-500 hover:text-burgundy-700 transition-colors text-sm font-medium"
+            >
+              <IconWorld className="w-4 h-4" />
+              <span className="text-burgundy-900 font-semibold">{currentLocaleLabel}</span>
+              <IconChevronDown className="w-4 h-4" />
+            </button>
+            <AnimatePresence>
+              {langDropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute right-0 top-full mt-2 bg-white border border-neutral-200 rounded-lg shadow-lg py-2 min-w-[140px] z-50"
+                >
+                  <Link
+                    href={`/${lang}`}
+                    className="block px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-burgundy-50 hover:text-burgundy-700 transition-colors"
+                    onClick={() => setLangDropdownOpen(false)}
+                  >
+                    <IconWorld className="w-4 h-4 inline mr-2" />
+                    {currentLocaleFullName}
+                  </Link>
+                  <Link
+                    href={switchedPath}
+                    className="block px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-burgundy-50 hover:text-burgundy-700 transition-colors"
+                    onClick={() => setLangDropdownOpen(false)}
+                  >
+                    <IconWorld className="w-4 h-4 inline mr-2" />
+                    {switchedLocaleFullName}
+                  </Link>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </nav>
         
         {/* Mobile menu toggle */}
@@ -109,15 +143,50 @@ const Header = ({ lang }: { lang: Locale }) => {
                         {lang === 'de' ? 'Kontakt' : 'Contact'}
                     </Link>
                     
-                    {/* Mobile Language Switcher */}
-                    <Link 
-                        href={switchedPath}
-                        className="flex items-center gap-2 text-neutral-500 hover:text-burgundy-700 transition-colors mt-4"
-                        onClick={() => setMobileMenuOpen(false)}
-                    >
-                        <IconWorld className="w-5 h-5" />
-                        {switchedLocale === 'de' ? 'Deutsch' : 'English'}
-                    </Link>
+                    {/* Mobile Language Switcher Dropdown */}
+                    <div className="relative mt-4">
+                        <button
+                            onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+                            className="flex items-center gap-2 text-neutral-500 hover:text-burgundy-700 transition-colors"
+                        >
+                            <IconWorld className="w-5 h-5" />
+                            <span className="text-burgundy-900 font-semibold">{currentLocaleLabel}</span>
+                            <IconChevronDown className="w-5 h-5" />
+                        </button>
+                        <AnimatePresence>
+                            {langDropdownOpen && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    className="absolute left-0 top-full mt-2 bg-white border border-neutral-200 rounded-lg shadow-lg py-2 min-w-[160px] z-50"
+                                >
+                                    <Link
+                                        href={`/${lang}`}
+                                        className="block px-4 py-2 text-base font-medium text-neutral-700 hover:bg-burgundy-50 hover:text-burgundy-700 transition-colors"
+                                        onClick={() => {
+                                            setMobileMenuOpen(false);
+                                            setLangDropdownOpen(false);
+                                        }}
+                                    >
+                                        <IconWorld className="w-5 h-5 inline mr-2" />
+                                        {currentLocaleFullName}
+                                    </Link>
+                                    <Link
+                                        href={switchedPath}
+                                        className="block px-4 py-2 text-base font-medium text-neutral-700 hover:bg-burgundy-50 hover:text-burgundy-700 transition-colors"
+                                        onClick={() => {
+                                            setMobileMenuOpen(false);
+                                            setLangDropdownOpen(false);
+                                        }}
+                                    >
+                                        <IconWorld className="w-5 h-5 inline mr-2" />
+                                        {switchedLocaleFullName}
+                                    </Link>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
                 </motion.div>
             )}
         </AnimatePresence>

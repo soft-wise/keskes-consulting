@@ -176,7 +176,7 @@ export default async function LangLayout({
   };
   
   return (
-    <html lang={lang}>
+    <html lang={lang}  suppressHydrationWarning>
       <head>
         <StructuredData data={organizationSchema} />
         <LocalBusinessSchema

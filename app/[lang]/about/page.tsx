@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { getDictionary } from "@/get-dictionary";
 import type { Locale } from "@/i18n-config";
 import { BreadcrumbSchema } from "@/components/seo";
+import { CTASection } from "@/components/sections/CTA-section";
 
 const baseUrl = "https://keskessconsulting.com";
 
@@ -124,6 +125,7 @@ export default async function AboutPage({
            </div>
         </div>
       </Section>
+      <CTASection dict={dict} lang={locale} />
     </>
   );
 }

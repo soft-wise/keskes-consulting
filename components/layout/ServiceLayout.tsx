@@ -1,11 +1,11 @@
 import Section from "@/components/utils/Section";
-import Button from "@/components/ui/Button";
 import Link from "next/link";
 import { IconArrowLeft, IconCheck } from "@tabler/icons-react";
 import type { Locale } from "@/i18n-config";
 import { ServiceSchema } from "@/components/seo";
 import { BreadcrumbSchema } from "@/components/seo";
 import { getBaseUrl } from "@/lib/seo-utils";
+import { CTASection } from "@/components/sections/CTA-section";
 
 export default function ServiceDetail({ 
     lang,
@@ -79,14 +79,7 @@ export default function ServiceDetail({
             </div>
         </div>
       </Section>
-
-      <Section background="muted" className="text-center py-24">
-         <h2 className="text-3xl md:text-5xl font-serif font-bold text-burgundy-900 mb-6">{String(serviceDetails.readyTitle)}</h2>
-         <p className="text-neutral-600 mb-10 text-xl max-w-2xl mx-auto">
-            {serviceDetails.readySubtitle.replace('{service}', String(service.title))}
-         </p>
-         <Button href={`/${lang}/contact`} className="text-lg px-8 py-4">{String(serviceDetails.contactButton)}</Button>
-      </Section>
+      <CTASection dict={dict} lang={lang} />
     </>
   );
 }

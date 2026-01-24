@@ -5,7 +5,19 @@ import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { motion } from "framer-motion";
 import type { Locale } from "@/i18n-config";
 
-export function ServicesSection({ dict, lang, icons }: { dict: any; lang: Locale; icons: React.ReactNode[] }) {
+interface Dictionary {
+  services: {
+    sectionTitle: string;
+    sectionSubtitle: string;
+    viewAll: string;
+    items: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
+}
+
+export function ServicesSection({ dict, lang, icons }: { dict: Dictionary; lang: Locale; icons: React.ReactNode[] }) {
   const serviceHrefs = ["/services/strategy", "/services/engineering", "/services/cloud", "/services/ai"];
 
   return (
@@ -25,7 +37,7 @@ export function ServicesSection({ dict, lang, icons }: { dict: any; lang: Locale
         </motion.div>
         
         <BentoGrid className="max-w-5xl mx-auto md:auto-rows-[20rem] grid-cols-1 md:grid-cols-2">
-          {dict.services.items.map((item: any, i: number) => (
+          {dict.services.items.map((item, i: number) => (
             <BentoGridItem
               key={i}
               title={item.title}
@@ -38,8 +50,8 @@ export function ServicesSection({ dict, lang, icons }: { dict: any; lang: Locale
         </BentoGrid>
         
         <div className="flex justify-center mt-10">
-          <Link href={`/${lang}/services`} className="text-burgundy-700 font-medium hover:underline flex items-center gap-2 group">
-            {dict.services.viewAll} <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+          <Link href={`/${lang}/services`} className="bg-burgundy-700 rounded-full text-white px-6 py-3 font-medium hover:bg-burgundy-800 transition-colors shadow-lg hover:shadow-xl hover:scale-105 transform duration-200">
+            {dict.services.viewAll}
           </Link>
         </div>
       </div>

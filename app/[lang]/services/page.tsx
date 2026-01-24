@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import { getDictionary } from "@/get-dictionary";
 import type { Locale } from "@/i18n-config";
 import { BreadcrumbSchema } from "@/components/seo";
+import { CTASection } from "@/components/sections/CTA-section";
 
 const baseUrl = "https://keskessconsulting.com";
 
@@ -95,13 +96,7 @@ export default async function ServicesPage({
         </div>
       </Section>
 
-      <Section background="muted" className={styles.ctaSection}>
-         <div className={styles.ctaContent}>
-            <h2>{dict.servicesPage.ctaTitle}</h2>
-            <p>{dict.servicesPage.ctaSubtitle}</p>
-            <Button href={`/${locale}/contact`}>{dict.servicesPage.ctaButton}</Button>
-         </div>
-      </Section>
+      <CTASection dict={dict} lang={locale} />
     </>
   );
 }

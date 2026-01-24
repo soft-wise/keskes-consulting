@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { IconBrandLinkedin, IconBrandTwitter, IconBrandGithub } from '@tabler/icons-react';
+import { IconBrandLinkedin } from '@tabler/icons-react';
 import type { Locale } from '@/i18n-config';
 
 const Footer = ({ lang }: { lang: Locale }) => {
   const t = {
-    description: lang === 'de' 
+    description: lang === 'de'
       ? 'Wir helfen zukunftsorientierten Unternehmen, das wahre Potenzial ihrer Daten zu erschließen.'
       : 'We help forward-thinking companies unlock the true potential of their data through expert consulting, engineering, and actionable insights.',
     company: lang === 'de' ? 'Unternehmen' : 'Company',
@@ -13,7 +13,6 @@ const Footer = ({ lang }: { lang: Locale }) => {
     services: lang === 'de' ? 'Leistungen' : 'Services',
     caseStudies: lang === 'de' ? 'Fallstudien' : 'Case Studies',
     contact: lang === 'de' ? 'Kontakt' : 'Contact',
-    contactUs: lang === 'de' ? 'Kontaktieren Sie uns' : 'Contact Us',
     impressum: 'Impressum',
     privacy: lang === 'de' ? 'Datenschutzrichtlinie' : 'Privacy Policy',
     terms: lang === 'de' ? 'Nutzungsbedingungen' : 'Terms of Service',
@@ -42,13 +41,8 @@ const Footer = ({ lang }: { lang: Locale }) => {
             </div>
 
             <div className="flex gap-4 mt-6 items-center">
-                <Link href={`/${lang}/contact`} className="bg-burgundy-700 text-white px-5 py-2 rounded-full font-medium text-sm hover:bg-burgundy-800 transition-colors shadow-sm">
-                    {t.contactUs}
-                </Link>
                 <div className="flex gap-2">
                     <SocialLink href="#" icon={<IconBrandLinkedin className="w-4 h-4" />} />
-                    <SocialLink href="#" icon={<IconBrandTwitter className="w-4 h-4" />} />
-                    <SocialLink href="#" icon={<IconBrandGithub className="w-4 h-4" />} />
                 </div>
             </div>
           </div>
@@ -77,7 +71,7 @@ const Footer = ({ lang }: { lang: Locale }) => {
         <div className="border-t border-burgundy-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-500">
           <p>&copy; {new Date().getFullYear()} Keskess Consulting. {t.copyright}</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-             <span>Designed with Aceternity</span>
+             {/* <span>Designed with Aceternity</span> */}
           </div>
         </div>
       </div>

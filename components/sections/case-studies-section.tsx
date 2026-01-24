@@ -5,8 +5,21 @@ import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { motion } from "framer-motion";
 import type { Locale } from "@/i18n-config";
 
-export function CaseStudiesSection({ dict, lang }: { dict: any; lang: Locale }) {
-  const projects = dict.caseStudies.cases.map((caseStudy: any, index: number) => ({
+interface Dictionary {
+  caseStudies: {
+    sectionTitle: string;
+    sectionSubtitle: string;
+    viewAll: string;
+    cases: Array<{
+      title: string;
+      description: string;
+      tag: string;
+    }>;
+  };
+}
+
+export function CaseStudiesSection({ dict, lang }: { dict: Dictionary; lang: Locale }) {
+  const projects = dict.caseStudies.cases.map((caseStudy, index: number) => ({
     title: caseStudy.title,
     description: caseStudy.description,
     link: `/${lang}/case-studies/case-${index + 1}`,
@@ -30,8 +43,8 @@ export function CaseStudiesSection({ dict, lang }: { dict: any; lang: Locale }) 
         <HoverEffect items={projects} />
         
         <div className="flex justify-center mt-8">
-          <Link href={`/${lang}/case-studies`} className="text-burgundy-700 font-medium hover:underline flex items-center gap-2 group">
-            {dict.caseStudies.viewAll} <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+          <Link href={`/${lang}/case-studies`} className="bg-burgundy-700 rounded-full text-white px-6 py-3 font-medium hover:bg-burgundy-800 transition-colors shadow-lg hover:shadow-xl hover:scale-105 transform duration-200">
+            {dict.caseStudies.viewAll}
           </Link>
         </div>
       </div>
