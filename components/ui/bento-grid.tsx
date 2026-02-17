@@ -48,7 +48,7 @@ export const BentoGridItem = ({
         <div className="font-sans font-bold text-neutral-900 mb-2 mt-4 font-serif text-xl group-hover/bento:text-burgundy-700 transition-colors">
           {title}
         </div>
-        <div className="font-sans font-normal text-neutral-500 text-base leading-relaxed">
+        <div className="font-sans font-normal text-neutral-600 tracking-wide leading-relaxed text-sm">
           {description}
         </div>
       </div>

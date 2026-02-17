@@ -14,20 +14,20 @@ export async function generateMetadata({
   const locale = lang as Locale;
   
   return {
-    title: "Data Strategy Consulting | Strategic Data Roadmaps",
-    description: "Align your data initiatives with business growth objectives. Our data strategy consultants help you map the path from chaos to clarity with comprehensive data maturity assessments and governance frameworks.",
+    title: "Data Strategy Consulting | Cost Optimization & Execution Roadmaps",
+    description: "Defining the steps to a functional data operation that survives the test of time. We provide high-level advisory to build lean systems with predictable costs and detailed execution roadmaps.",
     keywords: [
       "data strategy consulting",
-      "data roadmap",
+      "cost optimization",
+      "execution roadmaps",
       "data governance",
-      "data maturity assessment",
-      "business intelligence strategy",
-      "data transformation",
-      "enterprise data strategy",
+      "lean systems",
+      "data maturity",
+      "technology selection",
     ],
     openGraph: {
       title: "Data Strategy Consulting | Keskess Consulting",
-      description: "Transform your data into a competitive advantage with strategic data roadmaps and governance frameworks.",
+      description: "Build a system that serves you with cost optimization and detailed execution roadmaps.",
       url: `${baseUrl}/${locale}/services/strategy`,
       type: "website",
     },

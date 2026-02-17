@@ -17,17 +17,18 @@ export async function generateMetadata({
   const locale = lang as Locale;
   
   return {
-    title: "About Us - Our Mission, Vision & Team",
-    description: "Learn about our mission, vision, and the team behind Keskess Consulting. We are dedicated to helping businesses make better data-driven decisions.",
+    title: "About Us - Munich-Based Data Consultancy",
+    description: "Keskes Consulting is a Munich-based consultancy focused on the architecture and auditing of data systems. We operate at the intersection of business logic and technical execution.",
     keywords: [
-      "about keskess consulting",
-      "data consulting team",
-      "data strategy experts",
-      "analytics consulting company",
+      "data consultancy Munich",
+      "technical auditing",
+      "analytics engineering",
+      "data architecture",
+      "system stability",
     ],
     openGraph: {
       title: "About Keskess Consulting",
-      description: "Data engineers, strategists, and analysts dedicated to helping businesses make better decisions.",
+      description: "Munich-based consultancy focused on data architecture and auditing with commitment to system autonomy and long-term stability.",
       url: `${baseUrl}/${locale}/about`,
     },
     alternates: {
@@ -65,34 +66,21 @@ export default async function AboutPage({
         <p className={styles.pageSubtitle}>
           {dict.aboutPage.subtitle}
         </p>
+        <p className={styles.text} style={{ marginTop: '2rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
+          {dict.aboutPage.intro}
+        </p>
       </Section>
 
       <Section>
         <div className={styles.contentStack}>
-          {/* Mission */}
-          <div className={styles.row}>
-            <div className={styles.textCol}>
-              <h2 className={styles.sectionHeading}>{dict.aboutPage.mission.title}</h2>
-              <p className={styles.text}>
-                {dict.aboutPage.mission.description}
-              </p>
-            </div>
-            <div className={styles.imageCol}>
-              <div className={styles.imagePlaceholder} style={{ backgroundColor: '#E5E7EB' }} />
-            </div>
-          </div>
-
-          {/* Vision */}
-          <div className={`${styles.row} ${styles.reverse}`}>
-            <div className={styles.textCol}>
-              <h2 className={styles.sectionHeading}>{dict.aboutPage.vision.title}</h2>
-              <p className={styles.text}>
-                {dict.aboutPage.vision.description}
-              </p>
-            </div>
-             <div className={styles.imageCol}>
-              <div className={styles.imagePlaceholder} style={{ backgroundColor: '#D1D5DB' }} />
-            </div>
+          <h2 className={styles.centeredHeading}>{dict.aboutPage.services.title}</h2>
+          <div className={styles.valuesGrid}>
+            {dict.aboutPage.services.items.map((service: Record<string, unknown>, i: number) => (
+              <div key={i} className={styles.valueCard}>
+                <h3 className={styles.valueTitle}>{String(service.title)}</h3>
+                <p className={styles.valueDesc}>{String(service.description)}</p>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
@@ -108,21 +96,6 @@ export default async function AboutPage({
               </div>
             ))}
           </div>
-        </div>
-      </Section>
-
-      <Section>
-        <div className={styles.teamContainer}>
-           <h2 className={styles.centeredHeading}>{dict.aboutPage.team.title}</h2>
-           <div className={styles.teamGrid}>
-             {dict.aboutPage.team.members.map((member: Record<string, unknown>, i: number) => (
-               <div key={i} className={styles.teamMember}>
-                 <div className={styles.avatar} style={{ backgroundColor: avatarColors[i] }} />
-                 <h3 className={styles.memberName}>{String(member.name)}</h3>
-                 <p className={styles.memberRole}>{String(member.role)}</p>
-               </div>
-             ))}
-           </div>
         </div>
       </Section>
       <CTASection dict={dict} lang={locale} />

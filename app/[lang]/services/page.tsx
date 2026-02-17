@@ -18,19 +18,19 @@ export async function generateMetadata({
   const locale = lang as Locale;
   
   return {
-    title: "Our Services - Data Strategy, Engineering & Analytics",
-    description: "Comprehensive data solutions including strategy, engineering, cloud migration, and AI/ML. Transform your business with our expert consulting services.",
+    title: "Our Services - Data Due Diligence, Strategy & Analytics",
+    description: "Specialized data expertise including due diligence for investors, strategy consulting, full cycle analytics, and team workshops. Transform your business with our expert consulting services.",
     keywords: [
+      "data due diligence",
       "data strategy consulting",
       "analytics engineering",
-      "cloud migration services",
-      "AI ML consulting",
-      "data warehouse",
+      "data workshops",
+      "KPI verification",
       "business intelligence consulting",
     ],
     openGraph: {
       title: "Data & Analytics Consulting Services",
-      description: "Expert consulting in data strategy, engineering, cloud migration, and AI/ML solutions.",
+      description: "Specialized expertise in data due diligence, strategy consulting, analytics implementation, and team training.",
       url: `${baseUrl}/${locale}/services`,
     },
     alternates: {
@@ -43,7 +43,7 @@ export async function generateMetadata({
   };
 }
 
-const serviceHrefs = ["/services/strategy", "/services/engineering", "/services/cloud", "/services/ai"];
+const serviceHrefs = ["/services/due-diligence", "/services/strategy", "/services/analytics", "/services/workshops"];
 const imageColors = ["#E0F2FE", "#F0FDF4", "#FFF7ED", "#F3E8FF"];
 
 export default async function ServicesPage({

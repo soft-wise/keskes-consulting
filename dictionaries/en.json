@@ -7,78 +7,78 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Data strategy that moves",
-    "titleHighlight": "business forward",
-    "subtitle": "We help forward-thinking companies unlock the true potential of their data through expert consulting and actionable insights.",
+    "title": "From Business Questions",
+    "titleHighlight": "to Data Answers",
+    "subtitle": "High-level data strategy. Independent due diligence. Deep technical execution. We provide the expertise to transform your data into measurable business advantage.",
     "cta": "Get Started",
     "viewWork": "View Our Work"
   },
   "services": {
     "sectionTitle": "What we do",
-    "sectionSubtitle": "Comprehensive data solutions for modern enterprises.",
+    "sectionSubtitle": "Specialized data expertise for investors, executives, and technical teams.",
     "viewAll": "View all services",
     "items": [
       {
-        "title": "Strategic Data Roadmaps",
-        "description": "Align your data initiatives with 10x business growth objectives. We map the path from chaos to clarity."
+        "title": "Data Due Diligence",
+        "description": "Independent data verification for VCs, PEs, and Private Investors. Full KPI verification and system review."
       },
       {
-        "title": "Scalable Data Foundations",
-        "description": "Engineering robust pipelines that handle petabytes with millisecond latency. Built for future growth."
+        "title": "Data Strategy Consulting",
+        "description": "Defining the steps to a functional data operation. Cost optimization and detailed execution roadmaps."
       },
       {
-        "title": "Seamless Cloud Migration",
-        "description": "Modernize legacy systems with 0% downtime and improved security. Move faster, safer."
+        "title": "Full Cycle Analytics",
+        "description": "From raw data to business decisions. KPIs that matter and reliable data infrastructure."
       },
       {
-        "title": "Actionable AI & ML",
-        "description": "Deploy predictive models that directly impact the bottom line. Turn data into decisions."
+        "title": "The Rational Data Workshop",
+        "description": "Preparing your team for modern data challenges. Dashboard sprints and executive intelligence."
       }
     ]
   },
   "servicesPage": {
     "title": "Our Services",
-    "subtitle": "Comprehensive data solutions tailored to your business needs. From strategy to implementation, we help you unlock the full potential of your data.",
+    "subtitle": "Specialized expertise across data strategy, technical auditing, analytics implementation, and team development.",
     "learnMore": "Learn More",
     "services": [
       {
-        "title": "Data Strategy",
-        "description": "We help you define a clear roadmap to turn your data into a competitive advantage. Our strategic approach ensures that your data initiatives align with your business goals.",
+        "title": "Data Due Diligence",
+        "description": "Independent data verification for VCs, PEs, and Private Investors. We support investors in making informed decisions through independent, third-party data due diligence.",
         "bullets": [
-          "Data Maturity Assessment",
-          "Roadmap Development",
-          "Governance Frameworks",
-          "ROI Analysis"
+          "Full KPI Verification",
+          "Data System Review",
+          "Documentation & Bus Factor Audit",
+          "Comprehensive Evaluation Package"
         ]
       },
       {
-        "title": "Analytics Engineering",
-        "description": "Build a robust, scalable data foundation. We design and implement modern data stacks that deliver clean, reliable data to your stakeholders.",
+        "title": "Data Strategy Consulting",
+        "description": "Defining the steps to a functional data operation that survives the test of time. Build a system that serves you, not the other way around.",
         "bullets": [
-          "Data Modeling (dbt)",
-          "Pipeline Orchestration",
-          "Data Warehouse Architecture",
-          "Quality Assurance"
-        ]
-      },
-      {
-        "title": "Cloud Migration",
-        "description": "Move your legacy systems to the cloud with confidence. We handle the complex process of migration while optimizing for cost and performance.",
-        "bullets": [
-          "Legacy to Cloud Transition",
-          "Multi-cloud Strategy",
           "Cost Optimization",
-          "Security & Compliance"
+          "Detailed Execution Roadmaps",
+          "Lean Systems Approach",
+          "Predictability First"
         ]
       },
       {
-        "title": "Actionable AI & ML",
-        "description": "Deploy predictive models that directly impact the bottom line. Turn data into decisions with our AI and machine learning expertise.",
+        "title": "Full Cycle Analytics",
+        "description": "Every piece of data should lead to a business decision. We handle the entire process from tech to business, turning raw data into insights.",
         "bullets": [
-          "Predictive Modeling",
-          "Natural Language Processing",
-          "Computer Vision",
-          "MLOps"
+          "KPIs that Matter",
+          "Reliable Data Infrastructure",
+          "Automated Pipelines",
+          "Scalable for The Future"
+        ]
+      },
+      {
+        "title": "The Rational Data Workshop",
+        "description": "Preparing your team for modern data challenges. High-impact, hands-on training designed to develop data competence within your existing team.",
+        "bullets": [
+          "Dashboard Sprint",
+          "Executive Data Intelligence",
+          "Specialized Deep Dives",
+          "Zero-Friction Entry"
         ]
       }
     ],
@@ -119,50 +119,39 @@
   },
   "aboutPage": {
     "title": "About Keskess Consulting",
-    "subtitle": "We are a team of data engineers, strategists, and analysts dedicated to helping businesses make better decisions.",
-    "mission": {
-      "title": "Our Mission",
-      "description": "To democratize access to high-quality data insights. We believe that every company, regardless of size, deserves world-class data infrastructure."
-    },
-    "vision": {
-      "title": "Our Vision",
-      "description": "A world where data is not a bottleneck, but an accelerator. We envision a future where business leaders can ask questions and get answers instantly."
-    },
-    "values": {
-      "title": "Our Core Values",
+    "subtitle": "Defined by a commitment to system autonomy and long-term stability",
+    "intro": "Keskes Consulting is a Munich-based consultancy focused on the architecture and auditing of data systems. We operate at the intersection of business logic and technical execution, providing the specialized engineering required to turn data into a reliable corporate asset.",
+    "services": {
+      "title": "What We Do",
       "items": [
         {
-          "title": "Transparency",
-          "description": "We believe in open communication and clear data."
+          "title": "Technical Auditing",
+          "description": "We provide objective assessments for investment rounds and internal system overhauls. We verify data integrity, identify scalability bottlenecks, and uncover hidden risks within the infrastructure."
         },
         {
-          "title": "Excellence",
-          "description": "We don't settle for 'good enough'. We build for scale."
+          "title": "Analytics Engineering",
+          "description": "We handle the full implementation cycle, building the underlying pipelines and models required for accurate, automated reporting. Our focus is on creating lean architectures that minimize maintenance and technical debt."
         },
         {
-          "title": "Curiosity",
-          "description": "We ask the hard questions to find the right answers."
-        },
-        {
-          "title": "Impact",
-          "description": "We focus on work that drives real business results."
+          "title": "Onboarding and Handover",
+          "description": "A core component of our delivery is to give the client full ownership of the data infrastructure. We provide the logic maps and structural documentation required to navigate the environment, finalized with a functional handover for a clean transition."
         }
       ]
     },
-    "team": {
-      "title": "Meet the Leadership",
-      "members": [
+    "values": {
+      "title": "Values and Philosophy",
+      "items": [
         {
-          "name": "Sarah Jenkins",
-          "role": "CEO & Founder"
+          "title": "Logic-First Implementation",
+          "description": "Technical decisions are driven by specific business objectives. We prioritize functional utility over tool-based hype."
         },
         {
-          "name": "David Chen",
-          "role": "CTO"
+          "title": "Architecture Stability",
+          "description": "We utilize proven, reliable technologies that ensure long-term efficiency and predictable infrastructure costs."
         },
         {
-          "name": "Maria Rodriguez",
-          "role": "Head of Strategy"
+          "title": "Institutional Transparency",
+          "description": "Every project is delivered with clear structural documentation. We ensure that business logic, KPI definitions, and system maps remain a permanent, interpretable asset of the company."
         }
       ]
     }
@@ -234,44 +223,44 @@
     "readyTitle": "Ready to get started?",
     "readySubtitle": "Let's discuss how {service} can help your business transform and grow.",
     "contactButton": "Contact Us",
+    "due-diligence": {
+      "title": "Data Due Diligence",
+      "description": "Independent data verification for VCs, PEs, and Private Investors. We support investors in making informed decisions through independent, third-party data due diligence. We provide a premium offering that validates the figures presented by target companies and uncovers possible gaps in their reporting infrastructure.",
+      "benefits": [
+        "Full KPI Verification: Verify that reported business metrics are both accurate and reproducible. Integrity Check ensures KPIs reflect real business performance and are traceable to reliable data sources. Logic Validation confirms that formulas and definitions are technically sound and consistent.",
+        "Data System Review: Assess whether the startup's data architecture supports long-term business objectives. Risk Assessment spots hidden technical risks that could cause future cost explosions. Infrastructure Maturity evaluates the system's ability to handle increased volume without crashing.",
+        "Documentation & Bus Factor Audit: Evaluate the organizational resilience of the technical environment. Knowledge Retention audits system documentation to ensure the architecture is transparent and accessible. Assess the system collapse risk if a key team member leaves.",
+        "Evaluation Package: The audit concludes with a comprehensive due diligence report for every layer of company's data environment. Executive Risk Summary provides a high-level breakdown of critical technical findings, Standardized Risk Matrix offers numerical scoring across infrastructure and stability, and Technical Deep-Dive presents raw evidence and architectural observations."
+      ]
+    },
     "strategy": {
-      "title": "Data Strategy",
-      "description": "We help you define a clear roadmap to turn your data into a competitive advantage. Our strategic approach ensures that your data initiatives align with your business goals.",
+      "title": "Data Strategy Consulting",
+      "description": "Defining the steps to a functional data operation that survives the test of time. Whether you're establishing a data system or optimizing an existing setup, we provide the high-level advisory to build a system that serves you, not the other way around.",
       "benefits": [
-        "Data Maturity Assessment: Understand where you stand and where you need to go.",
-        "Roadmap Development: A step-by-step plan to achieve your data goals.",
-        "Governance Frameworks: Ensure data quality, security, and compliance.",
-        "ROI Analysis: Measure the business impact of your data investments."
+        "Cost Optimization: Uncovering the hidden saving potential within data systems through a rigorous technical audit. Efficiency Analysis finds cost traps such as KPI bloat and abandoned automated processes. Lean Infrastructure cuts long-term operating expenses across cloud services and staffing. Review your tech stack to identify overlapping tools and subscriptions.",
+        "Detailed Execution Roadmaps: A practical blueprint built for your specific budget and priorities. Framework Design defines custom KPIs and scalable data governance models. Technology Selection provides vetted, vendor-neutral tool and software recommendations with comprehensive cost breakdowns and TCO projections.",
+        "Lean Systems: Preventing overspend by recommending solutions designed for your business needs. Predictability First focuses on proven, scalable technologies that ensure the system stays stable and costs stay visible.",
+        "Validated Innovation: We bypass industry buzzwords in favor of durable, stable solutions. Integrating emerging trends only when they provide competitive advantage and measurable business value."
       ]
     },
-    "engineering": {
-      "title": "Analytics Engineering",
-      "description": "Build a robust, scalable data foundation. We design and implement modern data stacks that deliver clean, reliable data to your stakeholders.",
+    "analytics": {
+      "title": "Full Cycle Analytics",
+      "description": "Every piece of data should lead to a business decision. We handle the entire process from tech to business, turning your raw data into insights that accurately reflect performance.",
       "benefits": [
-        "Data Modeling (dbt): Transform raw data into business logic.",
-        "Pipeline Orchestration: Automate your data workflows.",
-        "Data Warehouse Architecture: Optimized for performance and cost.",
-        "Quality Assurance: Automated testing for data reliability."
+        "KPIs that Matter: You don't need more KPIs, you need the right ones. Built for Action with only relevant and decision-ready KPIs selected and processed. Cross-Product Alignment designs a single data language for consistent measurement across departments. Dynamically Refreshed numbers based on your business operations.",
+        "Reliable Data Infrastructure: Building solid foundations for accurate reporting. Data Source Integration investigates scattered tables and databases to reveal the single source of truth. Value Oriented with ROI at the heart of every technical step. Automated Pipelines maximize uptime and eliminate manual processes.",
+        "Scalable for The Future: Building for where your company is going, ensuring the architecture stays solid as your data grows while prioritizing lean infrastructure that does the job without piling up technical debt.",
+        "Technical Partnership: Supporting your teams to set the guidelines for how your company collects and uses data. Transparency ensures at project completion we provide documents detailing KPI formulas, data flows, and technical infrastructure processes."
       ]
     },
-    "cloud": {
-      "title": "Cloud Migration",
-      "description": "Move your legacy systems to the cloud with confidence. We handle the complex process of migration while optimizing for cost and performance.",
+    "workshops": {
+      "title": "The Rational Data Workshop",
+      "description": "Preparing your team for modern data challenges. Our sessions require no prior technical background or pre-work. We provide high-impact, hands-on training designed to develop data competence within your existing team structure.",
       "benefits": [
-        "Legacy to Cloud: Seamless transition strategies.",
-        "Multi-cloud Strategy: Avoid vendor lock-in.",
-        "Cost Optimization: Pay only for what you use.",
-        "Security & Compliance: Industry-standard protection."
-      ]
-    },
-    "ai": {
-      "title": "Actionable AI & ML",
-      "description": "Deploy predictive models that directly impact the bottom line. Turn data into decisions.",
-      "benefits": [
-        "Predictive Modeling: Forecast trends and behaviors.",
-        "Natural Language Processing: Unlock insights from text.",
-        "Computer Vision: Automate visual tasks.",
-        "MLOps: Deploy and maintain models in production."
+        "Dashboard Sprint: Unleashing true self-service reporting through a time-efficient, intensive workshop. Real-World Context trains exclusively on your internal data and specific KPIs. Immediate Result ensures every participant builds a functional, business-ready dashboard within a single session. The 'Unbreak' Logic teaches universal data principles to troubleshoot with confidence.",
+        "Executive Data Intelligence: Transform data into boardroom decisions. Analytical Precision catches data traps, misleading visualizations, and statistical distortions. Data-Business Translation gains the technical ground to turn business goals into executable solutions. Prioritizing Initiatives filters out noise to select projects based on your business scale.",
+        "Specialized Deep Dives: Intensive targeted sessions focused on specific areas. AI Tool Integration leverages LLMs and automated workflows in real-world scenarios. Data Security & Governance applies best practices for secure and compliant data environments. Data Documentation ensures smart collaboration through staff transitions.",
+        "Zero-Friction Entry: No technical prerequisites or pre-work required. Pre-Session Audits ensure content is completely relevant to your current data and business. Risk-Free Environments conducted in dedicated sandboxes for fearless experimentation. High-Touch On-Site Engagement capped at 12 participants to ensure every individual leaves with a proven, functional skill set."
       ]
     }
   },

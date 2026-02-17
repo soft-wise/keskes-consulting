@@ -16,8 +16,16 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ la
 
   return (
     <>
+      {/* <div className="sticky top-20 z-40 backdrop-blur-sm bg-white/80 bg-transparent! mb-4">
+        <div className="container mx-auto px-4 py-4">
+          <Link href={`/${lang}/case-studies`} className="inline-flex items-center gap-2 text-neutral-500 hover:text-burgundy-700 font-medium transition-colors group">
+            <span className="group-hover:-translate-x-1 transition-transform inline-block">&larr;</span>
+            Back to Case Studies
+          </Link>
+        </div>
+      </div> */}
+      
       <Section background="muted">
-        <Link href={`/${locale}/case-studies`} style={{ color: 'var(--text-secondary)', marginBottom: '1rem', display: 'block' }}>&larr; Back to Case Studies</Link>
         <h1 style={{ fontSize: '3rem', maxWidth: '800px' }}>Case Study Detail: {slug}</h1>
       </Section>
       <Section>

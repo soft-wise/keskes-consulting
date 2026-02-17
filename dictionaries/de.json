@@ -7,78 +7,78 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "title": "Datenstrategie, die",
-    "titleHighlight": "Unternehmen voranbringt",
-    "subtitle": "Wir helfen zukunftsorientierten Unternehmen, das wahre Potenzial ihrer Daten durch Expertenberatung und umsetzbare Erkenntnisse zu erschließen.",
+    "title": "Von Geschäftsfragen",
+    "titleHighlight": "zu Datenantworten",
+    "subtitle": "Hochrangige Datenstrategie. Unabhängige Due Diligence. Tiefgehende technische Umsetzung. Wir bieten das Fachwissen, um Ihre Daten in messbaren Geschäftsvorteil zu verwandeln.",
     "cta": "Jetzt starten",
     "viewWork": "Unsere Arbeit ansehen"
   },
   "services": {
     "sectionTitle": "Was wir tun",
-    "sectionSubtitle": "Umfassende Datenlösungen für moderne Unternehmen.",
+    "sectionSubtitle": "Spezialisierte Datenexpertise für Investoren, Führungskräfte und technische Teams.",
     "viewAll": "Alle Leistungen ansehen",
     "items": [
       {
-        "title": "Strategische Daten-Roadmaps",
-        "description": "Richten Sie Ihre Dateninitiativen auf 10-faches Unternehmenswachstum aus. Wir zeigen den Weg vom Chaos zur Klarheit."
+        "title": "Daten-Due-Diligence",
+        "description": "Unabhängige Datenverifizierung für VCs, PEs und Privatinvestoren. Vollständige KPI-Verifizierung und Systemüberprüfung."
       },
       {
-        "title": "Skalierbare Daten-Grundlagen",
-        "description": "Entwicklung robuster Pipelines, die Petabytes mit Millisekunden-Latenz verarbeiten. Für zukünftiges Wachstum gebaut."
+        "title": "Datenstrategieberatung",
+        "description": "Definition der Schritte zu einer funktionalen Datenoperation. Kostenoptimierung und detaillierte Ausführungs-Roadmaps."
       },
       {
-        "title": "Nahtlose Cloud-Migration",
-        "description": "Modernisieren Sie Legacy-Systeme mit 0% Ausfallzeit und verbesserter Sicherheit. Schneller und sicherer."
+        "title": "Full-Cycle-Analytics",
+        "description": "Von Rohdaten zu Geschäftsentscheidungen. KPIs, die zählen, und zuverlässige Dateninfrastruktur."
       },
       {
-        "title": "Umsetzbare KI & ML",
-        "description": "Setzen Sie prädiktive Modelle ein, die sich direkt auf das Ergebnis auswirken. Verwandeln Sie Daten in Entscheidungen."
+        "title": "Der Rational Data Workshop",
+        "description": "Vorbereitung Ihres Teams auf moderne Datenherausforderungen. Dashboard-Sprints und Executive Intelligence."
       }
     ]
   },
   "servicesPage": {
     "title": "Unsere Leistungen",
-    "subtitle": "Umfassende Datenlösungen, die auf Ihre Geschäftsanforderungen zugeschnitten sind. Von der Strategie bis zur Implementierung helfen wir Ihnen, das volle Potenzial Ihrer Daten zu erschließen.",
+    "subtitle": "Spezialisierte Expertise in Datenstrategie, technischer Prüfung, Analytics-Implementierung und Teamentwicklung.",
     "learnMore": "Mehr erfahren",
     "services": [
       {
-        "title": "Datenstrategie",
-        "description": "Wir helfen Ihnen, eine klare Roadmap zu definieren, um Ihre Daten in einen Wettbewerbsvorteil zu verwandeln. Unser strategischer Ansatz stellt sicher, dass Ihre Dateninitiativen mit Ihren Geschäftszielen übereinstimmen.",
+        "title": "Daten-Due-Diligence",
+        "description": "Unabhängige Datenverifizierung für VCs, PEs und Privatinvestoren. Wir unterstützen Investoren bei fundierten Entscheidungen durch unabhängige Daten-Due-Diligence Dritter.",
         "bullets": [
-          "Datenreife-Bewertung",
-          "Roadmap-Entwicklung",
-          "Governance-Frameworks",
-          "ROI-Analyse"
+          "Vollständige KPI-Verifizierung",
+          "Datensystemüberprüfung",
+          "Dokumentations- & Bus-Faktor-Audit",
+          "Umfassendes Bewertungspaket"
         ]
       },
       {
-        "title": "Analytics Engineering",
-        "description": "Bauen Sie eine robuste, skalierbare Datengrundlage auf. Wir entwerfen und implementieren moderne Daten-Stacks, die saubere, zuverlässige Daten an Ihre Stakeholder liefern.",
+        "title": "Datenstrategieberatung",
+        "description": "Definition der Schritte zu einer funktionalen Datenoperation, die den Test der Zeit besteht. Ein System aufbauen, das Ihnen dient, nicht umgekehrt.",
         "bullets": [
-          "Datenmodellierung (dbt)",
-          "Pipeline-Orchestrierung",
-          "Data Warehouse-Architektur",
-          "Qualitätssicherung"
-        ]
-      },
-      {
-        "title": "Cloud-Migration",
-        "description": "Migrieren Sie Ihre Legacy-Systeme mit Zuversicht in die Cloud. Wir bewältigen den komplexen Migrationsprozess und optimieren gleichzeitig Kosten und Leistung.",
-        "bullets": [
-          "Legacy zu Cloud-Übergang",
-          "Multi-Cloud-Strategie",
           "Kostenoptimierung",
-          "Sicherheit & Compliance"
+          "Detaillierte Ausführungs-Roadmaps",
+          "Lean-Systems-Ansatz",
+          "Vorhersehbarkeit zuerst"
         ]
       },
       {
-        "title": "Umsetzbare KI & ML",
-        "description": "Setzen Sie prädiktive Modelle ein, die sich direkt auf das Ergebnis auswirken. Verwandeln Sie Daten mit unserer KI- und Machine-Learning-Expertise in Entscheidungen.",
+        "title": "Full-Cycle-Analytics",
+        "description": "Jedes Datenelement sollte zu einer Geschäftsentscheidung führen. Wir handhaben den gesamten Prozess von Technik bis Business und verwandeln Rohdaten in Erkenntnisse.",
         "bullets": [
-          "Prädiktive Modellierung",
-          "Natural Language Processing",
-          "Computer Vision",
-          "MLOps"
+          "KPIs, die zählen",
+          "Zuverlässige Dateninfrastruktur",
+          "Automatisierte Pipelines",
+          "Skalierbar für die Zukunft"
+        ]
+      },
+      {
+        "title": "Der Rational Data Workshop",
+        "description": "Vorbereitung Ihres Teams auf moderne Datenherausforderungen. Wirkungsvolles, praxisnahes Training zur Entwicklung von Datenkompetenz innerhalb Ihrer bestehenden Teamstruktur.",
+        "bullets": [
+          "Dashboard-Sprint",
+          "Executive Data Intelligence",
+          "Spezialisierte Deep Dives",
+          "Reibungsfreier Einstieg"
         ]
       }
     ],
@@ -119,50 +119,39 @@
   },
   "aboutPage": {
     "title": "Über Keskess Consulting",
-    "subtitle": "Wir sind ein Team von Dateningenieuren, Strategen und Analysten, die sich der Unterstützung von Unternehmen bei besseren Entscheidungen widmen.",
-    "mission": {
-      "title": "Unsere Mission",
-      "description": "Den Zugang zu hochwertigen Dateneinblicken zu demokratisieren. Wir glauben, dass jedes Unternehmen, unabhängig von seiner Größe, eine erstklassige Dateninfrastruktur verdient."
-    },
-    "vision": {
-      "title": "Unsere Vision",
-      "description": "Eine Welt, in der Daten kein Engpass, sondern ein Beschleuniger sind. Wir stellen uns eine Zukunft vor, in der Geschäftsführer Fragen stellen und sofort Antworten erhalten können."
-    },
-    "values": {
-      "title": "Unsere Grundwerte",
+    "subtitle": "Definiert durch ein Engagement für Systemautonomie und langfristige Stabilität",
+    "intro": "Keskes Consulting ist eine in München ansässige Beratung mit Fokus auf die Architektur und Prüfung von Datensystemen. Wir operieren an der Schnittstelle von Geschäftslogik und technischer Umsetzung und liefern das spezialisierte Engineering, das erforderlich ist, um Daten in ein zuverlässiges Unternehmenskapital zu verwandeln.",
+    "services": {
+      "title": "Was wir tun",
       "items": [
         {
-          "title": "Transparenz",
-          "description": "Wir glauben an offene Kommunikation und klare Daten."
+          "title": "Technische Prüfung",
+          "description": "Wir bieten objektive Bewertungen für Investitionsrunden und interne Systemüberholungen. Wir verifizieren Datenintegrität, identifizieren Skalierbarkeitsengpässe und decken versteckte Risiken innerhalb der Infrastruktur auf."
         },
         {
-          "title": "Exzellenz",
-          "description": "Wir geben uns nicht mit 'gut genug' zufrieden. Wir bauen für Skalierung."
+          "title": "Analytics Engineering",
+          "description": "Wir handhaben den kompletten Implementierungszyklus und bauen die zugrundeliegenden Pipelines und Modelle auf, die für genaue, automatisierte Berichte erforderlich sind. Unser Fokus liegt auf der Schaffung schlanker Architekturen, die Wartung und technische Schulden minimieren."
         },
         {
-          "title": "Neugier",
-          "description": "Wir stellen die schwierigen Fragen, um die richtigen Antworten zu finden."
-        },
-        {
-          "title": "Wirkung",
-          "description": "Wir konzentrieren uns auf Arbeit, die echte Geschäftsergebnisse liefert."
+          "title": "Onboarding und Übergabe",
+          "description": "Eine Kernkomponente unserer Lieferung ist es, dem Kunden die volle Eigentümerschaft der Dateninfrastruktur zu geben. Wir stellen die Logik-Maps und strukturelle Dokumentation bereit, die für die Navigation in der Umgebung erforderlich sind, abgeschlossen mit einer funktionalen Übergabe für einen sauberen Übergang."
         }
       ]
     },
-    "team": {
-      "title": "Lernen Sie die Führung kennen",
-      "members": [
+    "values": {
+      "title": "Werte und Philosophie",
+      "items": [
         {
-          "name": "Sarah Jenkins",
-          "role": "CEO & Gründerin"
+          "title": "Logic-First-Implementierung",
+          "description": "Technische Entscheidungen werden von spezifischen Geschäftszielen getrieben. Wir priorisieren funktionale Nützlichkeit über werkzeugbasierten Hype."
         },
         {
-          "name": "David Chen",
-          "role": "CTO"
+          "title": "Architekturstabilität",
+          "description": "Wir nutzen bewährte, zuverlässige Technologien, die langfristige Effizienz und vorhersehbare Infrastrukturkosten gewährleisten."
         },
         {
-          "name": "Maria Rodriguez",
-          "role": "Leiterin Strategie"
+          "title": "Institutionelle Transparenz",
+          "description": "Jedes Projekt wird mit klarer struktureller Dokumentation geliefert. Wir stellen sicher, dass Geschäftslogik, KPI-Definitionen und System-Maps ein permanentes, interpretierbares Kapital des Unternehmens bleiben."
         }
       ]
     }
@@ -234,44 +223,44 @@
     "readyTitle": "Bereit anzufangen?",
     "readySubtitle": "Lassen Sie uns besprechen, wie {service} Ihrem Unternehmen beim Wachstum helfen kann.",
     "contactButton": "Kontaktieren Sie uns",
+    "due-diligence": {
+      "title": "Daten-Due-Diligence",
+      "description": "Unabhängige Datenverifizierung für VCs, PEs und Privatinvestoren. Wir unterstützen Investoren bei fundierten Entscheidungen durch unabhängige Daten-Due-Diligence Dritter. Wir bieten ein Premium-Angebot, das die von Zielunternehmen präsentierten Zahlen validiert und mögliche Lücken in ihrer Berichtsinfrastruktur aufdeckt.",
+      "benefits": [
+        "Vollständige KPI-Verifizierung: Verifizieren Sie, dass gemeldete Geschäftskennzahlen sowohl genau als auch reproduzierbar sind. Integritätsprüfung stellt sicher, dass KPIs die tatsächliche Geschäftsleistung widerspiegeln und auf zuverlässige Datenquellen zurückführbar sind. Logikvalidierung bestätigt, dass Formeln und Definitionen technisch fundiert und konsistent sind.",
+        "Datensystemüberprüfung: Bewerten Sie, ob die Datenarchitektur des Startups langfristige Geschäftsziele unterstützt. Risikobewertung identifiziert versteckte technische Risiken, die zukünftige Kostenexplosionen verursachen könnten. Infrastruktur-Reife bewertet die Fähigkeit des Systems, erhöhtes Volumen ohne Abstürze zu bewältigen.",
+        "Dokumentations- & Bus-Faktor-Audit: Bewerten Sie die organisatorische Resilienz der technischen Umgebung. Wissensbewahrung prüft Systemdokumentation, um sicherzustellen, dass die Architektur transparent und zugänglich ist. Bewerten Sie das Systemkollapsrisiko, wenn ein Schlüsselmitarbeiter das Unternehmen verlässt.",
+        "Bewertungspaket: Das Audit schließt mit einem umfassenden Due-Diligence-Bericht für jede Ebene der Datenumgebung des Unternehmens ab. Executive Risk Summary bietet eine hochrangige Aufschlüsselung kritischer technischer Erkenntnisse, Standardisierte Risikomat rix liefert numerische Bewertungen über Infrastruktur und Stabilität, und Technical Deep-Dive präsentiert Rohdaten und architektonische Beobachtungen."
+      ]
+    },
     "strategy": {
-      "title": "Datenstrategie",
-      "description": "Wir helfen Ihnen, eine klare Roadmap zu definieren, um Ihre Daten in einen Wettbewerbsvorteil zu verwandeln. Unser strategischer Ansatz stellt sicher, dass Ihre Dateninitiativen mit Ihren Geschäftszielen übereinstimmen.",
+      "title": "Datenstrategieberatung",
+      "description": "Definition der Schritte zu einer funktionalen Datenoperation, die den Test der Zeit besteht. Ob Sie ein Datensystem aufbauen oder ein bestehendes Setup optimieren, wir bieten die hochrangige Beratung, um ein System aufzubauen, das Ihnen dient, nicht umgekehrt.",
       "benefits": [
-        "Datenreife-Bewertung: Verstehen Sie, wo Sie stehen und wohin Sie gehen müssen.",
-        "Roadmap-Entwicklung: Ein schrittweiser Plan zur Erreichung Ihrer Datenziele.",
-        "Governance-Frameworks: Gewährleisten Sie Datenqualität, Sicherheit und Compliance.",
-        "ROI-Analyse: Messen Sie die geschäftlichen Auswirkungen Ihrer Dateninvestitionen."
+        "Kostenoptimierung: Aufdeckung des verborgenen Einsparpotenzials innerhalb von Datensystemen durch rigorose technische Prüfung. Effizienzanalyse findet Kostenfallen wie KPI-Bloat und verlassene automatisierte Prozesse. Lean Infrastructure reduziert langfristige Betriebskosten bei Cloud-Services und Personal. Überprüfen Sie Ihren Tech-Stack, um überlappende Tools und Abonnements zu identifizieren.",
+        "Detaillierte Ausführungs-Roadmaps: Ein praktischer Blueprint, der für Ihr spezifisches Budget und Ihre Prioritäten erstellt wurde. Framework-Design definiert kundenspezifische KPIs und skalierbare Data-Governance-Modelle. Technologieauswahl bietet geprüfte, herstellerneutrale Tool- und Softwareempfehlungen mit umfassenden Kostenaufschlüsselungen und TCO-Projektionen.",
+        "Lean Systems: Verhindern Sie Mehrausgaben durch Empfehlung von Lösungen, die für Ihre Geschäftsanforderungen entwickelt wurden. Vorhersehbarkeit zuerst konzentriert sich auf bewährte, skalierbare Technologien, die sicherstellen, dass das System stabil bleibt und die Kosten sichtbar bleiben.",
+        "Validierte Innovation: Wir umgehen Branchen-Buzzwords zugunsten langlebiger, stabiler Lösungen. Integration aufkommender Trends nur dann, wenn sie Wettbewerbsvorteile und messbaren Geschäftswert bieten."
       ]
     },
-    "engineering": {
-      "title": "Analytics Engineering",
-      "description": "Bauen Sie eine robuste, skalierbare Datengrundlage auf. Wir entwerfen und implementieren moderne Daten-Stacks, die saubere, zuverlässige Daten an Ihre Stakeholder liefern.",
+    "analytics": {
+      "title": "Full-Cycle-Analytics",
+      "description": "Jedes Datenelement sollte zu einer Geschäftsentscheidung führen. Wir handhaben den gesamten Prozess von Technik bis Business und verwandeln Ihre Rohdaten in Erkenntnisse, die die Leistung genau widerspiegeln.",
       "benefits": [
-        "Datenmodellierung (dbt): Transformieren Sie Rohdaten in Geschäftslogik.",
-        "Pipeline-Orchestrierung: Automatisieren Sie Ihre Daten-Workflows.",
-        "Data Warehouse-Architektur: Optimiert für Leistung und Kosten.",
-        "Qualitätssicherung: Automatisierte Tests für Datenzuverlässigkeit."
+        "KPIs, die zählen: Sie brauchen nicht mehr KPIs, Sie brauchen die richtigen. Built for Action mit nur relevanten und entscheidungsbereiten KPIs, die ausgewählt und verarbeitet werden. Cross-Product Alignment entwirft eine einheitliche Datensprache für konsistente Messungen über Abteilungen hinweg. Dynamisch aktualisierte Zahlen basierend auf Ihren Geschäftsabläufen.",
+        "Zuverlässige Dateninfrastruktur: Aufbau solider Grundlagen für genaue Berichterstattung. Datenquellenintegration untersucht verstreute Tabellen und Datenbanken, um die einzige Quelle der Wahrheit zu enthüllen. Wertorientiert mit ROI im Mittelpunkt jedes technischen Schritts. Automatisierte Pipelines maximieren die Verfügbarkeit und eliminieren manuelle Prozesse.",
+        "Skalierbar für die Zukunft: Bauen für die Zukunft Ihres Unternehmens und stellen sicher, dass die Architektur solide bleibt, wenn Ihre Daten wachsen, während schlanke Infrastruktur priorisiert wird, die die Arbeit ohne technische Schulden erledigt.",
+        "Technische Partnerschaft: Unterstützung Ihrer Teams bei der Festlegung der Richtlinien, wie Ihr Unternehmen Daten sammelt und nutzt. Transparenz stellt sicher, dass wir bei Projektabschluss Dokumente bereitstellen, die KPI-Formeln, Datenflüsse und technische Infrastrukturprozesse detailliert beschreiben."
       ]
     },
-    "cloud": {
-      "title": "Cloud-Migration",
-      "description": "Migrieren Sie Ihre Legacy-Systeme mit Zuversicht in die Cloud. Wir bewältigen den komplexen Migrationsprozess und optimieren gleichzeitig Kosten und Leistung.",
+    "workshops": {
+      "title": "Der Rational Data Workshop",
+      "description": "Vorbereitung Ihres Teams auf moderne Datenherausforderungen. Unsere Sitzungen erfordern keinen vorherigen technischen Hintergrund oder Vorarbeit. Wir bieten wirkungsvolles, praxisnahes Training zur Entwicklung von Datenkompetenz innerhalb Ihrer bestehenden Teamstruktur.",
       "benefits": [
-        "Legacy zu Cloud: Nahtlose Übergangsstrategien.",
-        "Multi-Cloud-Strategie: Vermeiden Sie Vendor Lock-in.",
-        "Kostenoptimierung: Zahlen Sie nur für das, was Sie nutzen.",
-        "Sicherheit & Compliance: Branchenstandard-Schutz."
-      ]
-    },
-    "ai": {
-      "title": "Umsetzbare KI & ML",
-      "description": "Setzen Sie prädiktive Modelle ein, die sich direkt auf das Ergebnis auswirken. Verwandeln Sie Daten in Entscheidungen.",
-      "benefits": [
-        "Prädiktive Modellierung: Prognostizieren Sie Trends und Verhaltensweisen.",
-        "Natural Language Processing: Erschließen Sie Erkenntnisse aus Text.",
-        "Computer Vision: Automatisieren Sie visuelle Aufgaben.",
-        "MLOps: Bereitstellen und Warten von Modellen in der Produktion."
+        "Dashboard-Sprint: Entfesselung echter Self-Service-Berichterstattung durch einen zeiteffizienten, intensiven Workshop. Real-World Context trainiert ausschließlich auf Ihren internen Daten und spezifischen KPIs. Sofortiges Ergebnis stellt sicher, dass jeder Teilnehmer ein funktionales, geschäftsbereites Dashboard innerhalb einer einzigen Sitzung erstellt. Die 'Unbreak'-Logik lehrt universelle Datenprinzipien zur Fehlerbehebung mit Zuversicht.",
+        "Executive Data Intelligence: Verwandeln Sie Daten in Boardroom-Entscheidungen. Analytische Präzision erfasst Datenfallen, irreführende Visualisierungen und statistische Verzerrungen. Data-Business-Translation gewinnt das technische Fundament, um Geschäftsziele in ausführbare Lösungen zu verwandeln. Priorisierung von Initiativen filtert Lärm heraus, um Projekte basierend auf Ihrem Geschäftsmaßstab auszuwählen.",
+        "Spezialisierte Deep Dives: Intensive gezielte Sitzungen mit Fokus auf spezifische Bereiche. AI-Tool-Integration nutzt LLMs und automatisierte Workflows in realen Szenarien. Datensicherheit & Governance wendet Best Practices für sichere und konforme Datenumgebungen an. Datendokumentation gewährleistet intelligente Zusammenarbeit durch Personalübergänge.",
+        "Reibungsfreier Einstieg: Keine technischen Voraussetzungen oder Vorarbeit erforderlich. Vorsitzungs-Audits stellen sicher, dass der Inhalt vollständig relevant für Ihre aktuellen Daten und Ihr Geschäft ist. Risikofreie Umgebungen in dedizierten Sandboxes für furchtloses Experimentieren. High-Touch-On-Site-Engagement begrenzt auf 12 Teilnehmer, um sicherzustellen, dass jeder Einzelne mit einem bewährten, funktionalen Skillset den Raum verlässt."
       ]
     }
   },

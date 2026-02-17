@@ -14,7 +14,7 @@ export default function ServiceDetail({
 }: {
     lang: Locale;
     dict: Record<string, unknown>;
-    serviceKey: 'strategy' | 'engineering' | 'cloud' | 'ai';
+    serviceKey: 'due-diligence' | 'strategy' | 'analytics' | 'workshops';
 }) {
   const serviceDetails = dict.serviceDetails as Record<string, { title: string; description: string; benefits: string[]; backToServices: string; whatWeOffer: string; readyTitle: string; readySubtitle: string; contactButton: string } & string>;
   const service = serviceDetails[serviceKey];
@@ -40,16 +40,21 @@ export default function ServiceDetail({
       <BreadcrumbSchema items={breadcrumbItems} />
       <ServiceSchema {...serviceSchemaData} />
       
+      {/* <div className="sticky top-20 z-40 backdrop-blur-sm bg-white/80">
+        <div className="container mx-auto px-4 py-4">
+          <Link 
+            href={`/${lang}/services`}
+            className="inline-flex items-center gap-2 text-neutral-500 hover:text-burgundy-700 font-medium transition-colors group"
+          >
+            <IconArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+            {String(serviceDetails.backToServices)}
+          </Link>
+        </div>
+      </div> */}
+      
       <Section background="muted" className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 mix-blend-multiply"></div>
         <div className="container mx-auto px-4 relative z-10">
-            <Link 
-                href={`/${lang}/services`}
-                className="inline-flex items-center gap-2 text-neutral-500 hover:text-burgundy-700 font-medium mb-8 transition-colors group"
-            >
-                <IconArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-                {String(serviceDetails.backToServices)}
-            </Link>
             <div className="max-w-4xl">
                 <h1 className="text-4xl md:text-7xl font-serif font-bold text-burgundy-900 mb-6">{service.title}</h1>
                 <p className="text-xl md:text-2xl text-neutral-600 leading-relaxed max-w-2xl">{service.description}</p>

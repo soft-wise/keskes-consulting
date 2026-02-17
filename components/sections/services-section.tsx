@@ -18,7 +18,7 @@ interface Dictionary {
 }
 
 export function ServicesSection({ dict, lang, icons }: { dict: Dictionary; lang: Locale; icons: React.ReactNode[] }) {
-  const serviceHrefs = ["/services/strategy", "/services/engineering", "/services/cloud", "/services/ai"];
+  const serviceHrefs = ["/services/due-diligence", "/services/strategy", "/services/analytics", "/services/workshops"];
 
   return (
     <section className="py-20 bg-white">
