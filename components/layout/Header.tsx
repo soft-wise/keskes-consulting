@@ -43,7 +43,7 @@ const Header = ({ lang }: { lang: Locale }) => {
         )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link href={`/${lang}`} className="font-serif font-bold text-2xl text-burgundy-900 tracking-tight z-50 relative">
+        <Link href={`/${lang}`} className="font-serif font-bold text-2xl text-gold-900 tracking-tight z-50 relative">
           Keskess Consulting
         </Link>
         <nav className="hidden md:flex items-center gap-8">
@@ -52,7 +52,7 @@ const Header = ({ lang }: { lang: Locale }) => {
                 <li key={item.href}>
                     <Link 
                         href={item.href} 
-                        className="text-neutral-600 hover:text-burgundy-700 font-medium transition-colors"
+                        className="text-neutral-600 hover:text-gold-700 font-medium transition-colors"
                     >
                         {item.label}
                     </Link>
@@ -61,7 +61,7 @@ const Header = ({ lang }: { lang: Locale }) => {
             <li>
                 <Link 
                     href={`/${lang}/contact`} 
-                    className="bg-burgundy-700 hover:bg-burgundy-800 text-white px-5 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg"
+                    className="bg-gold-700 hover:bg-gold-800 text-white px-5 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg"
                 >
                     {lang === 'de' ? 'Kontakt' : 'Contact'}
                 </Link>
@@ -72,10 +72,10 @@ const Header = ({ lang }: { lang: Locale }) => {
           <div className="relative">
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              className="flex items-center gap-2 text-neutral-500 hover:text-burgundy-700 transition-colors text-sm font-medium"
+              className="flex items-center gap-2 text-neutral-500 hover:text-gold-700 transition-colors text-sm font-medium"
             >
               <IconWorld className="w-4 h-4" />
-              <span className="text-burgundy-900 font-semibold">{currentLocaleLabel}</span>
+              <span className="text-gold-900 font-semibold">{currentLocaleLabel}</span>
               <IconChevronDown className="w-4 h-4" />
             </button>
             <AnimatePresence>
@@ -88,7 +88,7 @@ const Header = ({ lang }: { lang: Locale }) => {
                 >
                   <Link
                     href={`/${lang}`}
-                    className="block px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-burgundy-50 hover:text-burgundy-700 transition-colors"
+                    className="block px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-gold-50 hover:text-gold-700 transition-colors"
                     onClick={() => setLangDropdownOpen(false)}
                   >
                     <IconWorld className="w-4 h-4 inline mr-2" />
@@ -96,7 +96,7 @@ const Header = ({ lang }: { lang: Locale }) => {
                   </Link>
                   <Link
                     href={switchedPath}
-                    className="block px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-burgundy-50 hover:text-burgundy-700 transition-colors"
+                    className="block px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-gold-50 hover:text-gold-700 transition-colors"
                     onClick={() => setLangDropdownOpen(false)}
                   >
                     <IconWorld className="w-4 h-4 inline mr-2" />
@@ -113,7 +113,7 @@ const Header = ({ lang }: { lang: Locale }) => {
             className="md:hidden z-50 relative p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-            {mobileMenuOpen ? <IconX className="text-burgundy-900" /> : <IconMenu2 className="text-burgundy-900" />}
+            {mobileMenuOpen ? <IconX className="text-gold-900" /> : <IconMenu2 className="text-gold-900" />}
         </button>
 
         {/* Mobile Navigation Overlay */}
@@ -129,7 +129,7 @@ const Header = ({ lang }: { lang: Locale }) => {
                         <Link 
                             key={item.href}
                             href={item.href} 
-                            className="text-2xl font-serif font-medium text-burgundy-900 hover:text-burgundy-700"
+                            className="text-2xl font-serif font-medium text-gold-900 hover:text-gold-700"
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             {item.label}
@@ -137,7 +137,7 @@ const Header = ({ lang }: { lang: Locale }) => {
                     ))}
                     <Link 
                         href={`/${lang}/contact`} 
-                        className="bg-burgundy-700 text-white px-8 py-3 rounded-full font-medium text-lg mt-4 shadow-lg"
+                        className="bg-gold-700 text-white px-8 py-3 rounded-full font-medium text-lg mt-4 shadow-lg"
                         onClick={() => setMobileMenuOpen(false)}
                     >
                         {lang === 'de' ? 'Kontakt' : 'Contact'}
@@ -147,10 +147,10 @@ const Header = ({ lang }: { lang: Locale }) => {
                     <div className="relative mt-4">
                         <button
                             onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-                            className="flex items-center gap-2 text-neutral-500 hover:text-burgundy-700 transition-colors"
+                            className="flex items-center gap-2 text-neutral-500 hover:text-gold-700 transition-colors"
                         >
                             <IconWorld className="w-5 h-5" />
-                            <span className="text-burgundy-900 font-semibold">{currentLocaleLabel}</span>
+                            <span className="text-gold-900 font-semibold">{currentLocaleLabel}</span>
                             <IconChevronDown className="w-5 h-5" />
                         </button>
                         <AnimatePresence>
@@ -163,7 +163,7 @@ const Header = ({ lang }: { lang: Locale }) => {
                                 >
                                     <Link
                                         href={`/${lang}`}
-                                        className="block px-4 py-2 text-base font-medium text-neutral-700 hover:bg-burgundy-50 hover:text-burgundy-700 transition-colors"
+                                        className="block px-4 py-2 text-base font-medium text-neutral-700 hover:bg-gold-50 hover:text-gold-700 transition-colors"
                                         onClick={() => {
                                             setMobileMenuOpen(false);
                                             setLangDropdownOpen(false);
@@ -174,7 +174,7 @@ const Header = ({ lang }: { lang: Locale }) => {
                                     </Link>
                                     <Link
                                         href={switchedPath}
-                                        className="block px-4 py-2 text-base font-medium text-neutral-700 hover:bg-burgundy-50 hover:text-burgundy-700 transition-colors"
+                                        className="block px-4 py-2 text-base font-medium text-neutral-700 hover:bg-gold-50 hover:text-gold-700 transition-colors"
                                         onClick={() => {
                                             setMobileMenuOpen(false);
                                             setLangDropdownOpen(false);

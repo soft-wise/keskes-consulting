@@ -50,7 +50,7 @@ export function ServicesSection({ dict, lang, icons }: { dict: Dictionary; lang:
         </BentoGrid>
         
         <div className="flex justify-center mt-10">
-          <Link href={`/${lang}/services`} className="bg-burgundy-700 rounded-full text-white px-6 py-3 font-medium hover:bg-burgundy-800 transition-colors shadow-lg hover:shadow-xl hover:scale-105 transform duration-200">
+          <Link href={`/${lang}/services`} className="bg-gold-700 rounded-full text-white px-6 py-3 font-medium hover:bg-gold-800 transition-colors shadow-lg hover:shadow-xl hover:scale-105 transform duration-200">
             {dict.services.viewAll}
           </Link>
         </div>
