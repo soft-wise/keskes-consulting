@@ -21,11 +21,11 @@ const Footer = ({ lang }: { lang: Locale }) => {
   };
 
   return (
-    <footer className="bg-burgundy-50 border-t border-burgundy-100 text-neutral-600 py-16">
+    <footer className="bg-gold-50 border-t border-gold-100 text-neutral-600 py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
-            <Link href={`/${lang}`} className="font-serif font-bold text-2xl text-burgundy-900 tracking-tight hover:text-burgundy-700 transition-colors">
+            <Link href={`/${lang}`} className="font-serif font-bold text-2xl text-gold-900 tracking-tight hover:text-gold-700 transition-colors">
               Keskess Consulting
             </Link>
             <p className="mt-4 text-neutral-600 max-w-sm leading-relaxed">
@@ -35,8 +35,8 @@ const Footer = ({ lang }: { lang: Locale }) => {
             <div className="mt-6 flex flex-col gap-2 text-sm text-neutral-600">
                 <p>123 Data Street, Tech District, CA 94043</p>
                 <div className="flex gap-4">
-                    <a href="tel:+15550123456" className="hover:text-burgundy-700 transition-colors">+1 (555) 012-3456</a>
-                    <a href="mailto:hello@keskessconsulting.com" className="hover:text-burgundy-700 transition-colors">hello@keskessconsulting.com</a>
+                    <a href="tel:+15550123456" className="hover:text-gold-700 transition-colors">+1 (555) 012-3456</a>
+                    <a href="mailto:hello@keskessconsulting.com" className="hover:text-gold-700 transition-colors">hello@keskessconsulting.com</a>
                 </div>
             </div>
 
@@ -48,7 +48,7 @@ const Footer = ({ lang }: { lang: Locale }) => {
           </div>
           
           <div>
-            <h4 className="font-bold text-burgundy-900 mb-6 uppercase tracking-wider text-sm">{t.company}</h4>
+            <h4 className="font-bold text-gold-900 mb-6 uppercase tracking-wider text-sm">{t.company}</h4>
             <ul className="space-y-3">
               <FooterLink href={`/${lang}/about`}>{t.aboutUs}</FooterLink>
               <FooterLink href={`/${lang}/services`}>{t.services}</FooterLink>
@@ -58,7 +58,7 @@ const Footer = ({ lang }: { lang: Locale }) => {
           </div>
           
           <div>
-             <h4 className="font-bold text-burgundy-900 mb-6 uppercase tracking-wider text-sm">{t.legal}</h4>
+             <h4 className="font-bold text-gold-900 mb-6 uppercase tracking-wider text-sm">{t.legal}</h4>
             <ul className="space-y-3">
               <FooterLink href={`/${lang}/impressum`}>{t.impressum}</FooterLink>
               <FooterLink href={`/${lang}/privacy`}>{t.privacy}</FooterLink>
@@ -68,7 +68,7 @@ const Footer = ({ lang }: { lang: Locale }) => {
           </div>
         </div>
         
-        <div className="border-t border-burgundy-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-500">
+        <div className="border-t border-gold-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-500">
           <p>&copy; {new Date().getFullYear()} Keskess Consulting. {t.copyright}</p>
           <div className="flex gap-6 mt-4 md:mt-0">
              {/* <span>Designed with Aceternity</span> */}
@@ -81,14 +81,14 @@ const Footer = ({ lang }: { lang: Locale }) => {
 
 const FooterLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
     <li>
-        <Link href={href} className="hover:text-burgundy-700 hover:translate-x-1 transition-all duration-200 inline-block">
+        <Link href={href} className="hover:text-gold-700 hover:translate-x-1 transition-all duration-200 inline-block">
             {children}
         </Link>
     </li>
 );
 
 const SocialLink = ({ href, icon }: { href: string; icon: React.ReactNode }) => (
-    <a href={href} className="p-2 bg-white rounded-full text-burgundy-900 hover:bg-burgundy-100 hover:text-burgundy-700 transition-all duration-200 shadow-sm border border-burgundy-100">
+    <a href={href} className="p-2 bg-white rounded-full text-gold-900 hover:bg-gold-100 hover:text-gold-700 transition-all duration-200 shadow-sm border border-gold-100">
         {icon}
     </a>
 );

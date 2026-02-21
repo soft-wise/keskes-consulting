@@ -35,7 +35,7 @@ export const HoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-burgundy-100/50 block rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-gold-100/50 block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -51,7 +51,7 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <div className="flex items-center justify-between mb-4">
-               {item.tag && <span className="text-xs font-semibold uppercase tracking-wider text-burgundy-700 bg-burgundy-50 px-2 py-1 rounded">{item.tag}</span>}
+               {item.tag && <span className="text-xs font-semibold uppercase tracking-wider text-gold-700 bg-gold-50 px-2 py-1 rounded">{item.tag}</span>}
             </div>
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
@@ -72,7 +72,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-6 overflow-hidden bg-white border border-neutral-100 group-hover:border-burgundy-200 relative z-20 shadow-sm transition-colors duration-200",
+        "rounded-2xl h-full w-full p-6 overflow-hidden bg-white border border-neutral-100 group-hover:border-gold-200 relative z-20 shadow-sm transition-colors duration-200",
         className
       )}
     >
