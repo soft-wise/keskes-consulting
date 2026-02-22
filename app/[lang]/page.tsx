@@ -57,10 +57,10 @@ export default async function Home({
   const dict = await getDictionary(locale);
 
   const serviceIcons = [
-    <div key="bulb" className="p-3 bg-gold-50 w-fit rounded-lg mb-2"><IconBulb className="h-6 w-6 text-gold-700" /></div>,
-    <div key="chart" className="p-3 bg-gold-50 w-fit rounded-lg mb-2"><IconChartBar className="h-6 w-6 text-gold-700" /></div>,
-    <div key="cloud" className="p-3 bg-gold-50 w-fit rounded-lg mb-2"><IconCloud className="h-6 w-6 text-gold-700" /></div>,
-    <div key="brain" className="p-3 bg-gold-50 w-fit rounded-lg mb-2"><IconBrain className="h-6 w-6 text-gold-700" /></div>,
+    <div key="bulb" className="p-3 bg-burgundy-50 w-fit rounded-lg mb-2"><IconBulb className="h-6 w-6 text-burgundy-700" /></div>,
+    <div key="chart" className="p-3 bg-burgundy-50 w-fit rounded-lg mb-2"><IconChartBar className="h-6 w-6 text-burgundy-700" /></div>,
+    <div key="cloud" className="p-3 bg-burgundy-50 w-fit rounded-lg mb-2"><IconCloud className="h-6 w-6 text-burgundy-700" /></div>,
+    <div key="brain" className="p-3 bg-burgundy-50 w-fit rounded-lg mb-2"><IconBrain className="h-6 w-6 text-burgundy-700" /></div>,
   ];
 
   // WebSite structured data

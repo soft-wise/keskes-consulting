@@ -12,21 +12,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        gold: {
-          50: "#fdfaf5",
-          100: "#fbf3e6",
-          200: "#f6e3c7",
-          300: "#f0cf9f",
-          400: "#E0A161", // Primary
-          500: "#d4893d",
-          600: "#C87828", // Hover
-          700: "#a5611f",
-          800: "#874e1e",
-          900: "#6e411c",
-          950: "#3d210d",
+        burgundy: {
+          50: "#fdf3f4",
+          100: "#fbe8eb",
+          200: "#f6d5da",
+          300: "#efb2bb",
+          400: "#e58493",
+          500: "#d8576b",
+          600: "#c1364d",
+          700: "#8B2635", // Primary
+          800: "#882534",
+          900: "#752431",
+          950: "#410f17",
         },
-        primary: "#E0A161",
-        "primary-hover": "#C87828",
+        primary: "#8B2635",
+        "primary-hover": "#6D1E2A",
       },
       animation: {
         aurora: "aurora 60s linear infinite",
