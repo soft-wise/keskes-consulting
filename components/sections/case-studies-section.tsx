@@ -43,7 +43,7 @@ export function CaseStudiesSection({ dict, lang }: { dict: Dictionary; lang: Loc
         <HoverEffect items={projects} />
         
         <div className="flex justify-center mt-8">
-          <Link href={`/${lang}/case-studies`} className="bg-gold-700 rounded-full text-white px-6 py-3 font-medium hover:bg-gold-800 transition-colors shadow-lg hover:shadow-xl hover:scale-105 transform duration-200">
+          <Link href={`/${lang}/case-studies`} className="bg-burgundy-700 rounded-full text-white px-6 py-3 font-medium hover:bg-burgundy-800 transition-colors shadow-lg hover:shadow-xl hover:scale-105 transform duration-200">
             {dict.caseStudies.viewAll}
           </Link>
         </div>
