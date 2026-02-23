@@ -47,9 +47,10 @@ const config: Config = {
 };
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flatPlugin(theme("colors"));
-  let newVars = Object.fromEntries(
+  const allColors = flatPlugin(theme("colors"));
+  const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
 
